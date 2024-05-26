@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import { ReactNode } from 'react'
+import { Header } from '@/widgets/header'
 
 const ttFirsNeue = localFont({
   src: [
@@ -35,7 +36,10 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="ru" className={ttFirsNeue.variable}>
-      <body className={ttFirsNeue.className}>{children}</body>
+      <body className={ttFirsNeue.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }

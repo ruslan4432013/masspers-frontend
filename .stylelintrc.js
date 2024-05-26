@@ -7,4 +7,9 @@ export default {
     'stylelint-config-tailwindcss/scss',
   ],
   plugins: ['stylelint-order', 'stylelint-scss'],
+  rules: {
+    'selector-class-pattern': '[a-zA-Z]+(_[a-zA-Z]+)*',
+    'at-rule-no-unknown': null,
+    'scss/at-rule-no-unknown': true,
+  },
 }

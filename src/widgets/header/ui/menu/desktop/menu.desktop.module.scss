@@ -1,0 +1,19 @@
+.menu_desktop {
+  @apply hidden justify-between px-5;
+  @apply md:flex md:py-5;
+  @apply xl:container xl:py-8;
+}
+
+.main_nav {
+  @apply flex font-medium justify-between items-center text-base text-center ml-5 w-full max-w-[687px];
+  @apply lg:ml-0 lg:text-xl;
+  @apply xl:max-w-[790px];
+}
+
+.laptop_logo {
+  @apply hidden md:block lg:hidden;
+}
+
+.desktop_logo {
+  @apply hidden lg:block;
+}

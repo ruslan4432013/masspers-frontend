@@ -29,4 +29,7 @@ export default [
     },
   },
   eslintConfigPrettier,
+  {
+    ignores: ['.next/*'],
+  },
 ]

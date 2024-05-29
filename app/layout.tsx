@@ -3,6 +3,7 @@ import localFont from 'next/font/local'
 import './globals.css'
 import { ReactNode } from 'react'
 import { Header } from '@/widgets/header'
+import { Footer } from '@/widgets/footer'
 
 const ttFirsNeue = localFont({
   src: [
@@ -27,6 +28,10 @@ export const metadata: Metadata = {
   },
   description:
     'Quick generation of video messages that can communicate with the recipient',
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+  },
 }
 
 type Props = {
@@ -39,6 +44,7 @@ export default function RootLayout({ children }: Props) {
       <body className={ttFirsNeue.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )

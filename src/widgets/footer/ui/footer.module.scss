@@ -1,0 +1,71 @@
+.footer {
+  @apply pt-8 pb-16 m-auto bg-[#F3F3F3];
+}
+
+.left {
+  @apply md:flex md:flex-col md:gap-[30px];
+}
+
+.top {
+  @apply md:flex md:justify-between md:px-5 xl:container md:w-full;
+}
+
+.bottom {
+  @apply xl:container md:px-5 md:flex md:justify-between md:flex-row-reverse md:items-center md:mt-[38px];
+}
+
+.logo {
+  @apply flex items-center justify-center;
+}
+
+.phone {
+  @apply text-primary-500 font-medium text-2xl mt-[47px] flex justify-center md:justify-start;
+}
+
+.mail {
+  @apply text-primary-500 font-medium text-base flex justify-center mt-[6px]
+  md:justify-start;
+}
+
+.links_wrapper {
+  @apply flex flex-col font-normal text-base gap-12 mt-[39px]
+  md:mt-0 md:flex-row md:items-start;
+}
+
+.links {
+  @apply flex flex-col items-center justify-center gap-2 text-center;
+}
+
+.meta {
+  @apply mt-12
+  md:mt-0 md:flex md:items-start md:gap-8
+  xl:gap-[51px];
+}
+
+.contacts {
+  @apply mt-[61px] flex flex-col items-center justify-center
+  md:mt-0 md:items-end;
+}
+
+.contact_title {
+  @apply text-2xl font-normal;
+}
+
+.order_button_wrapper {
+  @apply flex items-center justify-center;
+}
+
+.contact_subtitle {
+  @apply mt-2.5 text-base font-medium max-w-[225px] flex flex-col items-center justify-center gap-5 text-center
+  md:items-end md:text-end;
+}
+
+.meta_links {
+  @apply text-primary-500 mt-[57px] text-center flex flex-col items-center justify-center
+  md:mt-0 md:items-end;
+}
+
+.icons {
+  @apply flex items-center justify-center mt-[53px] gap-2
+  md:mt-0;
+}

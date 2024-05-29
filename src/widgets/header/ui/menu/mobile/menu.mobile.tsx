@@ -1,7 +1,7 @@
 'use client'
+import { Logo } from '@/shared/ui/logo'
 import s from './menu.mobile.module.scss'
 import cn from 'classnames'
-import { Logo } from './logo'
 import Link from 'next/link'
 import { useState } from 'react'
 
@@ -12,7 +12,9 @@ export const MenuMobile = () => {
 
   return (
     <nav className={cn(s.menu_mobile)}>
-      <Logo />
+      <Link href={'#'}>
+        <Logo />
+      </Link>
       <div
         onClick={handleToggle}
         className={cn(s.menu_collapsed, {

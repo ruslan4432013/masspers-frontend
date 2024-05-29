@@ -2,7 +2,7 @@ type Props = {
   className?: string
 }
 
-export const LaptopLogo = ({ className }: Props) => {
+export const LogoLaptop = ({ className }: Props) => {
   return (
     <svg
       className={className}

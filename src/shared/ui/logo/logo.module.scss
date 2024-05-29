@@ -1,0 +1,11 @@
+.logo_mobile {
+  @apply md:hidden;
+}
+
+.logo_laptop {
+  @apply hidden md:block xl:hidden;
+}
+
+.logo_desktop {
+  @apply hidden xl:block;
+}

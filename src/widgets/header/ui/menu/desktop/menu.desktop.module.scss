@@ -9,11 +9,3 @@
   @apply lg:ml-0 lg:text-xl;
   @apply xl:max-w-[790px];
 }
-
-.laptop_logo {
-  @apply hidden md:block lg:hidden;
-}
-
-.desktop_logo {
-  @apply hidden lg:block;
-}

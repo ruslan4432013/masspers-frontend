@@ -2,7 +2,7 @@ type Props = {
   className?: string
 }
 
-export const DesktopLogo = ({ className }: Props) => (
+export const LogoDesktop = ({ className }: Props) => (
   <svg
     className={className}
     width="208"

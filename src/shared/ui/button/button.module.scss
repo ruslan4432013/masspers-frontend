@@ -1,0 +1,12 @@
+.button {
+  @apply transition-colors rounded-[10px] py-5 px-[22px] text-base font-medium;
+}
+
+.primary {
+  @apply bg-primary-500 text-white hover:bg-primary-300;
+}
+
+.secondary {
+  @apply bg-white text-primary-500 border-primary-500 border
+  hover:border-primary-300 hover:text-primary-300;
+}

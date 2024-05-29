@@ -10,6 +10,12 @@ const config: Config = {
       fontFamily: {
         neue: ['var(--font-tt-firs-neue)'],
       },
+      colors: {
+        primary: {
+          300: '#FF7273',
+          500: '#EE4143',
+        },
+      },
     },
   },
   plugins: [],

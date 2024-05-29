@@ -1,6 +1,11 @@
-export const Logo = () => {
+type Props = {
+  className?: string
+}
+
+export const LogoMobile = ({ className }: Props) => {
   return (
     <svg
+      className={className}
       width="146"
       height="41"
       viewBox="0 0 146 41"

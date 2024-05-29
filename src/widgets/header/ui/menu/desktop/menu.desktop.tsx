@@ -1,14 +1,12 @@
 import s from './menu.desktop.module.scss'
-import { LaptopLogo } from './laptop.logo'
-import { DesktopLogo } from './desktop.logo'
 import Link from 'next/link'
+import { Logo } from '@/shared/ui/logo'
 
 export const MenuDesktop = () => {
   return (
     <nav className={s.menu_desktop}>
       <Link href="#">
-        <LaptopLogo className={s.laptop_logo} />
-        <DesktopLogo className={s.desktop_logo} />
+        <Logo />
       </Link>
       <ul className={s.main_nav}>
         <li>

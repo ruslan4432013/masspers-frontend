@@ -51,9 +51,15 @@ export const Footer = () => {
           <Link href={'/'}>Разработка сайта</Link>
         </div>
         <div className={s.icons}>
-          <FacebookIcon />
-          <VkIcon />
-          <TelegramIcon />
+          <Link href={'/'}>
+            <FacebookIcon />
+          </Link>
+          <Link href={'/'}>
+            <VkIcon />
+          </Link>
+          <Link href={'/'}>
+            <TelegramIcon />
+          </Link>
         </div>
       </div>
     </footer>

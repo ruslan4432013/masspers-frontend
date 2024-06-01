@@ -2,9 +2,9 @@ import s from './footer.module.scss'
 import Link from 'next/link'
 import { Logo } from '@/shared/ui/logo'
 import { Button } from '@/shared/ui/button'
-import { FacebookIcon } from '@/widgets/footer/ui/social-media-logos/facebook-icon'
-import { TelegramIcon } from '@/widgets/footer/ui/social-media-logos/telegram-icon'
-import { VkIcon } from '@/widgets/footer/ui/social-media-logos/vk-icon'
+import { FacebookIcon } from './social-media-logos/facebook-icon'
+import { TelegramIcon } from './social-media-logos/telegram-icon'
+import { VkIcon } from './social-media-logos/vk-icon'
 
 export const Footer = () => {
   return (

@@ -1,9 +1,11 @@
 import { MainIntro } from '@/widgets/main-intro'
 
-export const HomePage = () => {
+const HomePage = () => {
   return (
     <main>
       <MainIntro />
     </main>
   )
 }
+
+export default HomePage

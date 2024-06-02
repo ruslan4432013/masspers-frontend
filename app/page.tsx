@@ -1,11 +1,7 @@
-import { MainIntro } from '@/widgets/footer/main-intro'
+import { HomePage } from '@/pages/home'
 
 const Home = () => {
-  return (
-    <main>
-      <MainIntro />
-    </main>
-  )
+  return <HomePage />
 }
 
 export default Home

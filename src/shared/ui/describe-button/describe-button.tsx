@@ -41,7 +41,7 @@ export const DescribeButton = (props: Props) => {
           alt={'show less icon'}
         />
       </button>
-      <p>{title}</p>
+      <p className="font-medium">{title}</p>
       <div />
       <p
         className={cn(s.describe_button__description, {

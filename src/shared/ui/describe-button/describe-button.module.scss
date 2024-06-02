@@ -55,7 +55,7 @@
 }
 
 .describe_button__link___decoration {
-  position: relative;
+  @apply relative;
 
   &::before {
     content: '';
@@ -65,5 +65,5 @@
 }
 
 .describe_button__description___active {
-  @apply opacity-100;
+  @apply opacity-100 mb-[32px];
 }

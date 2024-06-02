@@ -1,0 +1,208 @@
+.greeting_text {
+  position: absolute;
+  bottom: 94px;
+  left: 77px;
+  width: 150px;
+  transform: skew(335deg, 9deg);
+
+  @apply text-white text-base text-center;
+}
+
+/* Typewriter effect 1 */
+@keyframes typing {
+  0.0000%,
+  27.3488% {
+    content: '';
+  }
+
+  1.1395%,
+  26.2093% {
+    content: 'В';
+  }
+
+  2.2791%,
+  25.0698% {
+    content: 'Вл';
+  }
+
+  3.4186%,
+  23.9302% {
+    content: 'Вла';
+  }
+
+  4.5581%,
+  22.7907% {
+    content: 'Влади';
+  }
+
+  5.6977%,
+  21.6512% {
+    content: 'Владим';
+  }
+
+  6.8372%,
+  20.5116% {
+    content: 'Владими';
+  }
+
+  7.9767%,
+  19.3721% {
+    content: 'Владимир';
+  }
+
+  30.7674%,
+  51.2791% {
+    content: '';
+  }
+
+  31.9070%,
+  50.1395% {
+    content: 'М';
+  }
+
+  33.0465%,
+  49.0000% {
+    content: 'Ма';
+  }
+
+  34.1860%,
+  47.8605% {
+    content: 'Мар';
+  }
+
+  35.3256%,
+  46.7209% {
+    content: 'Март';
+  }
+
+  36.4651%,
+  45.5814% {
+    content: 'Марти';
+  }
+
+  37.6047%,
+  44.4419% {
+    content: 'Мартин';
+  }
+
+  54.6977%,
+  75.2093% {
+    content: '';
+  }
+
+  55.8372%,
+  74.0698% {
+    content: 'Н';
+  }
+
+  56.9767%,
+  72.9302% {
+    content: 'Ни';
+  }
+
+  58.1163%,
+  71.7907% {
+    content: 'Ник';
+  }
+
+  59.2558%,
+  70.6512% {
+    content: 'Ники';
+  }
+
+  60.3953%,
+  69.5116% {
+    content: 'Никит';
+  }
+
+  61.5349%,
+  68.3721% {
+    content: 'Никита';
+  }
+
+  78.6279%,
+  96.8605% {
+    content: '';
+  }
+
+  79.7674%,
+  95.7209% {
+    content: 'А';
+  }
+
+  80.9070%,
+  94.5814% {
+    content: 'Аг';
+  }
+
+  82.0465%,
+  93.4419% {
+    content: 'Ага';
+  }
+
+  83.1860%,
+  92.3023% {
+    content: 'Агат';
+  }
+
+  84.3256%,
+  91.1628% {
+    content: 'Агата';
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  animation: typing 13.5s infinite;
+  content: '';
+}
+
+.typewriter::after {
+  border-right: 1px solid var(--caret);
+  animation: blink 0.5s linear infinite;
+  content: '';
+}
+
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+
+  @keyframes sequence-popup {
+    0%,
+    100% {
+      content: 'Владимир';
+    }
+
+    25% {
+      content: 'Мартин';
+    }
+
+    50% {
+      content: 'Никита';
+    }
+
+    75% {
+      content: 'Агата';
+    }
+  }
+
+  .typewriter::before {
+    animation: sequence-popup 12s linear infinite;
+    content: 'Владимир';
+  }
+}

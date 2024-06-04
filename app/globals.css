@@ -3,6 +3,39 @@
 @tailwind utilities;
 
 * {
+  --sb-track-color: #d9d9d9;
+  --sb-thumb-color: #f00;
+  --sb-size: 6px;
+
   margin: 0;
   padding: 0;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    background-clip: padding-box;
+    border-right: 2px solid transparent;
+    border-left: 2px solid transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 50px;
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

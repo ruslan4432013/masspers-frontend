@@ -1,0 +1,50 @@
+.client_cases {
+  @apply bg-white rounded-[10px] mx-[10px] pt-[56px] mt-[79px] md:pb-[93px] md:px-[61px] xl:container;
+
+  box-shadow: 0 4px 87px 0 rgb(0 0 0 / 15%);
+}
+
+.client_cases__title {
+  @apply text-[32px] text-primary-500 mx-[45px] text-center md:text-start md:mx-0 md:text-[62px] font-medium;
+
+  text-shadow: 5px 3px 10px rgb(0 0 0 / 31%);
+}
+
+.client_cases__logo_wrapper {
+  @apply mx-[12px] mt-[36px] p-[16px_10px];
+}
+
+.client_cases__preview_video {
+  @apply md:grid md:grid-cols-[2fr_1fr] md:gap-[17px] md:mt-[36px];
+}
+
+.client_cases__video_wrapper {
+  @apply rounded-[10px] overflow-hidden mt-[16px] mx-[12px] md:mt-0 md:mx-0;
+}
+
+.client_cases__preview_wrapper {
+  @apply rounded-[10px] overflow-hidden mt-[37.5px] mx-[12px]
+  md:h-full md:mt-0 md:mx-0;
+
+  box-shadow: 0 4px 87px 0 rgb(0 0 0 / 15%);
+}
+
+.client_cases__previews {
+  @apply grid px-[16px] py-[12px] gap-[16px] max-h-[300px] mx-[12px] relative overflow-y-auto rounded-[10px];
+
+  grid-template-columns: repeat(auto-fit, minmax(124px, 1fr));
+}
+
+.client_cases__preview {
+  @apply w-full h-full rounded-[5px];
+}
+
+.client_cases__button {
+  @apply mx-auto block mt-[15px] md:w-full md:mt-auto;
+
+  box-shadow: 0 7px 14px rgb(0 0 0 / 40%);
+}
+
+.client_cases__right {
+  @apply md:flex md:flex-col gap-2.5;
+}

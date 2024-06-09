@@ -1,0 +1,48 @@
+.our_team__paper {
+  background-image: url('./background-about.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @apply rounded-[10px] mx-[10px] flex flex-col items-center pt-[46px] px-[9px]
+  md:flex-row md:pr-[16px] md:pl-[40px] md:justify-between md:mt-[81px]
+  xl:container xl:max-h-[341px];
+}
+
+.our_team__description_wrapper {
+  @apply flex flex-col justify-center items-center md:order-1 md:min-w-[392px] md:max-w-[392px] md:items-start md:shrink-0 self-start;
+}
+
+.our_team__images {
+  @apply max-h-[285px] overflow-auto flex flex-col gap-[6px] mt-[19px] pr-[16px] md:order-3 md:shrink-0 xl:mt-0 mb-[21px];
+}
+
+.our_team__image {
+  @apply min-w-[113px] min-h-[159px] rounded-[10px];
+}
+
+.our_team__founders {
+  @apply mx-auto
+  md:order-2 md:mr-[39px] md:self-end md:-ml-[100px] md:w-[479] md:h-[343px]
+  xl:w-[611px] xl:h-[396px] xl:ml-0 xl:mr-0;
+}
+
+.our_team__founders_image {
+  @apply w-full h-full object-contain object-bottom;
+}
+
+.our_team__title {
+  @apply text-base font-normal;
+}
+
+.our_team__description {
+  @apply text-base font-normal text-primary-500 uppercase text-center mt-[14px] md:text-start md:text-2xl md:min-w-[422px] md:max-w-[422px] z-10
+  xl:min-w-[542px] xl:max-w-[542px];
+}
+
+.our_team__link_button {
+  @apply mt-[50px] md:mt-[22px];
+}
+
+.our_team__button {
+  @apply uppercase;
+}

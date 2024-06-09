@@ -1,5 +1,5 @@
 .client_cases {
-  @apply bg-white rounded-[10px] mx-[10px] pt-[56px] mt-[79px] md:pb-[93px] md:px-[61px] xl:container;
+  @apply bg-white rounded-[10px] mx-[10px] pb-[52px] pt-[56px] mt-[79px] md:pb-[93px] md:px-[61px] xl:container;
 
   box-shadow: 0 4px 87px 0 rgb(0 0 0 / 15%);
 }
@@ -35,8 +35,16 @@
   grid-template-columns: repeat(auto-fit, minmax(124px, 1fr));
 }
 
+.client_cases__preview_button {
+  @apply bg-none border-2 border-transparent rounded-[5px];
+}
+
+.client_cases__preview_button___active {
+  @apply border-primary-500 border-solid;
+}
+
 .client_cases__preview {
-  @apply w-full h-full rounded-[5px];
+  @apply w-full h-full;
 }
 
 .client_cases__button {

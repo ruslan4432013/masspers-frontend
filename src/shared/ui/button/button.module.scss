@@ -3,7 +3,11 @@
 }
 
 .primary {
-  @apply bg-primary-500 text-white hover:bg-primary-300;
+  @apply bg-primary-500 text-white;
+
+  @media screen and (hover: hover) {
+    @apply hover:bg-primary-300;
+  }
 }
 
 .secondary {

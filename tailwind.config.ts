@@ -11,6 +11,10 @@ const config: Config = {
         neue: ['var(--font-tt-firs-neue)'],
       },
       colors: {
+        dark: {
+          300: '#cfcfcf',
+          500: '#35393a',
+        },
         primary: {
           300: '#FF7273',
           500: '#EE4143',

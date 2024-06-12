@@ -20,8 +20,8 @@ export const ApplicationForm = () => {
             <Input placeholder={'Как к вам обращаться?'} />
             <Input placeholder={'Наименование вашей компании'} />
             <Input placeholder={'Ваш контактный телефон'} />
-            <Select>
-              <option value="" disabled selected>
+            <Select defaultValue={''}>
+              <option value="" disabled>
                 Отрасль вашего бизнеса
               </option>
               <option value="small">Малый бизнес</option>

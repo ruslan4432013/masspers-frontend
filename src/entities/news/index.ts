@@ -1,0 +1,1 @@
+export { NewsSlide } from './ui'

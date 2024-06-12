@@ -5,10 +5,16 @@ import { Button } from '@/shared/ui/button'
 import { FacebookIcon } from './social-media-logos/facebook-icon'
 import { TelegramIcon } from './social-media-logos/telegram-icon'
 import { VkIcon } from './social-media-logos/vk-icon'
+import cn from 'classnames'
 
-export const Footer = () => {
+type Props = {
+  className?: string
+}
+
+export const Footer = (props: Props) => {
+  const { className } = props
   return (
-    <footer className={s.footer}>
+    <footer className={cn(s.footer, className)}>
       <div className={s.top}>
         <div>
           <div className={s.logo}>

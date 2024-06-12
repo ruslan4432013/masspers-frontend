@@ -1,0 +1,1 @@
+export { NewsPaper } from './ui'

@@ -1,0 +1,15 @@
+.news_paper__title {
+  @apply text-[32px] text-center text-primary-500 uppercase md:max-w-[380px] mx-auto;
+}
+
+.news_paper__bullet_active {
+  @apply bg-primary-500 opacity-100 w-[12px] h-[12px];
+}
+
+.news_paper__bullet {
+  @apply w-[12px] h-[12px];
+}
+
+.news_paper__swiper {
+  @apply pb-[70px];
+}

@@ -39,3 +39,25 @@
     display: none;
   }
 }
+
+:root {
+  --swiper-pagination-bullet-size: 12px;
+  --swiper-pagination-bullet-width: 12px;
+  --swiper-pagination-bullet-height: 12px;
+  --swiper-navigation-sides-offset: -20px;
+  @media screen and (min-width: 1440px) {
+    --swiper-navigation-sides-offset: -60px;
+  }
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  color: #ee4143;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @media screen and (max-width: 1023px) {
+    display: none !important;
+  }
+}

@@ -1,1 +1,1 @@
-export { NewsPaper } from './ui'
+export { default } from './ui'

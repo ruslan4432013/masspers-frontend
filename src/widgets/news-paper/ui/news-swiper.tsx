@@ -10,7 +10,7 @@ type Props = {
   date: Date
 }
 
-export const NewsSwiper = ({ date }: Props) => {
+const NewsSwiper = ({ date }: Props) => {
   const [swiperRef, setSwiperRef] = useState<SwiperClass>()
 
   const handlePrevious = useCallback(() => {
@@ -77,3 +77,5 @@ export const NewsSwiper = ({ date }: Props) => {
     </div>
   )
 }
+
+export default NewsSwiper

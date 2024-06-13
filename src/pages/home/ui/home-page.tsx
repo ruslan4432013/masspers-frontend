@@ -3,7 +3,7 @@ import { ClientCases } from '@/widgets/client-cases'
 import { OurTeam } from '@/widgets/our-team'
 import { TaskSolvers } from '@/widgets/task-solvers/ui'
 import { ApplicationForm } from '@/widgets/application-form'
-import { NewsPaper } from '@/widgets/news-paper'
+import NewsPaper from '@/widgets/news-paper'
 
 const HomePage = () => {
   return (

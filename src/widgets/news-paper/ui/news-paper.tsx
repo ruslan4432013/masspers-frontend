@@ -1,11 +1,8 @@
 import s from './news-paper.module.scss'
-import { NewsSwiper } from './news-swiper'
+import NewsSwiper from './news-swiper'
 
-const getTime = (): Promise<Date> =>
-  new Promise((resolve) => resolve(new Date()))
-
-export const NewsPaper = async () => {
-  const date = await getTime()
+const NewsPaper = () => {
+  const date = new Date()
   return (
     <div className="xl:container">
       <h5 className={s.news_paper__title}>Последние новости нашей команды</h5>
@@ -15,3 +12,5 @@ export const NewsPaper = async () => {
     </div>
   )
 }
+
+export default NewsPaper

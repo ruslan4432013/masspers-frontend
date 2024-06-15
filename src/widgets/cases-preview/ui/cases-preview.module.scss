@@ -1,0 +1,37 @@
+.cases_preview {
+  background-image: url('./cases-background.png');
+
+  @apply bg-cover bg-no-repeat;
+
+  &__inner {
+    @apply pt-[61px] pb-[54px] px-[12px] text-center flex-col flex items-center justify-center gap-[71px]
+    md:flex-row md:text-start md:justify-between md:px-[21px] md:pt-[63px] md:pb-[73px] md:gap-[43px] md:items-start
+    xl:container xl:justify-start xl:pl-[178px] xl:gap-[72px] xl:pt-[93px] xl:pb-[122px] xl:items-center;
+  }
+
+  &__top {
+    @apply flex-col flex items-center md:justify-start md:items-start md:max-w-[325px];
+  }
+
+  &__title {
+    text-shadow: 5px 3px 10px rgb(0 0 0 / 31%);
+
+    @apply text-[32px] text-primary-500;
+  }
+
+  &__subtitle {
+    @apply text-[18px] mt-[12px] md:mt-[21px];
+  }
+
+  &__button {
+    @apply uppercase mt-[52px] md:mt-[31px];
+  }
+
+  &__image_wrapper {
+    @apply md:max-w-[608px] xl:max-w-[initial];
+  }
+
+  &__image {
+    @apply w-full h-full;
+  }
+}

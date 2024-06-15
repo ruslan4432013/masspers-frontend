@@ -1,16 +1,15 @@
 'use client'
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react'
-import { NewsSlide } from '@/entities/news'
-import newsImg from './news-example.png'
 import { Pagination } from 'swiper/modules'
 import s from './news-paper.module.scss'
-import { useCallback, useState } from 'react'
+import { Children, ReactNode, useCallback, useState } from 'react'
 
 type Props = {
-  date: Date
+  children: ReactNode[]
 }
 
-const NewsSwiper = ({ date }: Props) => {
+const NewsSwiper = ({ children }: Props) => {
+  const arrayChildren = Children.toArray(children)
   const [swiperRef, setSwiperRef] = useState<SwiperClass>()
 
   const handlePrevious = useCallback(() => {
@@ -39,38 +38,9 @@ const NewsSwiper = ({ date }: Props) => {
           },
         }}
       >
-        <SwiperSlide>
-          <NewsSlide
-            date={date}
-            title={`Персонализированный видеомаркетинг: следующая революция в контент-маркетинге`}
-            subtitle={`«Персонализированный Видеоконтент Может Стать Маркетинговым Прорывом, В Котором Нуждаются Бренды”...`}
-            previewImg={newsImg.src}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <NewsSlide
-            date={date}
-            title={`Персонализированный видеомаркетинг: следующая революция в контент-маркетинге`}
-            subtitle={`«Персонализированный Видеоконтент Может Стать Маркетинговым Прорывом, В Котором Нуждаются Бренды”...`}
-            previewImg={newsImg.src}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <NewsSlide
-            date={date}
-            title={`Персонализированный видеомаркетинг: следующая революция в контент-маркетинге`}
-            subtitle={`«Персонализированный Видеоконтент Может Стать Маркетинговым Прорывом, В Котором Нуждаются Бренды”...`}
-            previewImg={newsImg.src}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <NewsSlide
-            date={date}
-            title={`Персонализированный видеомаркетинг: следующая революция в контент-маркетинге`}
-            subtitle={`«Персонализированный Видеоконтент Может Стать Маркетинговым Прорывом, В Котором Нуждаются Бренды”...`}
-            previewImg={newsImg.src}
-          />
-        </SwiperSlide>
+        {Children.map(arrayChildren, (slide) => (
+          <SwiperSlide>{slide}</SwiperSlide>
+        ))}
       </Swiper>
       <button className="swiper-button-prev" onClick={handlePrevious}></button>
       <button className="swiper-button-next" onClick={handleNext}></button>

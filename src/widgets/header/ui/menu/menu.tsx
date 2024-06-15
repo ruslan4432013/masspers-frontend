@@ -1,4 +1,3 @@
-'use client'
 import { MenuMobile } from './mobile/menu.mobile'
 import { MenuDesktop } from './desktop/menu.desktop'
 

@@ -3,7 +3,7 @@
 }
 
 .primary {
-  @apply bg-primary-500 text-white;
+  @apply bg-primary-500 text-white border border-primary-500;
 
   @media screen and (hover: hover) {
     @apply hover:bg-primary-300;

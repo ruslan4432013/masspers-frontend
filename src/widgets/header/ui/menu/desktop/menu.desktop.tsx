@@ -1,6 +1,7 @@
 import s from './menu.desktop.module.scss'
 import Link from 'next/link'
 import { Logo } from '@/shared/ui/logo'
+import { Links } from '../links'
 
 export const MenuDesktop = () => {
   return (
@@ -8,26 +9,7 @@ export const MenuDesktop = () => {
       <Link href="#">
         <Logo />
       </Link>
-      <ul className={s.main_nav}>
-        <li>
-          <Link href={'#'}>Продукт</Link>
-        </li>
-        <li>
-          <Link href={'#'}>Кейсы</Link>
-        </li>
-        <li>
-          <Link href={'#'}>Наша команда</Link>
-        </li>
-        <li>
-          <Link href={'#'}>Заявка</Link>
-        </li>
-        <li>
-          <Link href={'#'}>Блог</Link>
-        </li>
-        <li>
-          <Link href={'#'}>Контакты</Link>
-        </li>
-      </ul>
+      <Links className={s.main_nav} />
     </nav>
   )
 }

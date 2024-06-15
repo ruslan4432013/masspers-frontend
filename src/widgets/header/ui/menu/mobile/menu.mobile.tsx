@@ -4,6 +4,7 @@ import s from './menu.mobile.module.scss'
 import cn from 'classnames'
 import Link from 'next/link'
 import { useState } from 'react'
+import { Links } from '../links'
 
 export const MenuMobile = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -22,28 +23,9 @@ export const MenuMobile = () => {
         })}
       >
         <div className={s.bar}></div>
-        <nav className={s.menu_mobile__nav}>
-          <ul className={s.menu_mobile__links}>
-            <li>
-              <Link href={'#'}>Продукт</Link>
-            </li>
-            <li>
-              <Link href={'#'}>Кейсы</Link>
-            </li>
-            <li>
-              <Link href={'#'}>Наша команда</Link>
-            </li>
-            <li>
-              <Link href={'#'}>Заявка</Link>
-            </li>
-            <li>
-              <Link href={'#'}>Блог</Link>
-            </li>
-            <li>
-              <Link href={'#'}>Контакты</Link>
-            </li>
-          </ul>
-        </nav>
+        <div className={s.menu_mobile__nav}>
+          <Links className={s.menu_mobile__links} />
+        </div>
       </div>
     </nav>
   )

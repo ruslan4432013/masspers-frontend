@@ -1,5 +1,5 @@
 import s from './news-paper.module.scss'
-import NewsSwiper from './news-swiper'
+import { NewsSwiper } from '@/shared/ui/news-swiper'
 import newsImg from './news-example.png'
 import { NewsSlide } from '@/entities/news'
 

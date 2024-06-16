@@ -2,13 +2,13 @@ import { ButtonHTMLAttributes, DetailedHTMLProps, Ref } from 'react'
 import cn from 'classnames'
 import s from './button.module.scss'
 
-type Variants = 'primary' | 'secondary'
+export type ButtonVariants = 'primary' | 'secondary'
 
 type Props = DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 > & {
-  variant?: Variants
+  variant?: ButtonVariants
   buttonRef?: Ref<HTMLButtonElement>
 }
 export const Button = (props: Props) => {

@@ -5,7 +5,7 @@ import stopImg from './stop.png'
 import Image from 'next/image'
 import cn from 'classnames'
 import Link from 'next/link'
-import { Arrow } from './arrow'
+import { RedArrow } from '../red-arrow'
 
 type Props = {
   title: string
@@ -53,7 +53,7 @@ export const DescribeButton = (props: Props) => {
           <span className={s.describe_button__link___decoration}>
             Подробнее
           </span>
-          <Arrow />
+          <RedArrow />
         </Link>
       </p>
     </div>

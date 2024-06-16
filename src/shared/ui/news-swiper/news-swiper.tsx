@@ -1,14 +1,14 @@
 'use client'
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
-import s from './news-paper.module.scss'
+import s from './news-swiper.module.scss'
 import { Children, ReactNode, useCallback, useState } from 'react'
 
 type Props = {
   children: ReactNode[]
 }
 
-const NewsSwiper = ({ children }: Props) => {
+export const NewsSwiper = ({ children }: Props) => {
   const arrayChildren = Children.toArray(children)
   const [swiperRef, setSwiperRef] = useState<SwiperClass>()
 
@@ -47,5 +47,3 @@ const NewsSwiper = ({ children }: Props) => {
     </div>
   )
 }
-
-export default NewsSwiper

@@ -1,0 +1,27 @@
+.case_slide {
+  border-radius: 10px 10px 0 0;
+
+  @apply overflow-hidden  pb-[74px] min-h-[326px];
+
+  &__image_wrapper {
+    box-shadow: 0 4px 87px 0 rgb(0 0 0 / 25%);
+
+    @apply aspect-video;
+  }
+
+  &__image {
+    @apply w-full h-full;
+  }
+
+  &__meta {
+    @apply mt-[28px] ml-[25px] flex flex-col gap-[7px];
+  }
+
+  &__title {
+    @apply text-primary-500 text-[22px] uppercase;
+  }
+
+  &__link {
+    @apply text-primary-500 flex gap-[8px] items-center;
+  }
+}

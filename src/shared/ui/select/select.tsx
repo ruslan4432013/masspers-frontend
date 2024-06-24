@@ -10,8 +10,10 @@ type Props = DetailedHTMLProps<
 export const Select = (props: Props) => {
   const { className, children, ...other } = props
   return (
-    <select {...other} className={cn(s.select, className)}>
-      {children}
-    </select>
+    <div className={s.select_wrapper}>
+      <select {...other} className={cn(s.select, className)}>
+        {children}
+      </select>
+    </div>
   )
 }

@@ -4,7 +4,7 @@ import s from './select-solve-type.module.scss'
 import { useState } from 'react'
 import { Select } from '@/shared/ui/select'
 
-type SelectProps = {
+interface SelectProps {
   onChange: (value: string) => void
   value: string
 }
@@ -27,7 +27,7 @@ const MobileSelect = ({ onChange, value }: SelectProps) => {
   )
 }
 
-type TabProps = {
+interface TabProps {
   text: string
   value: string
   isActive?: boolean

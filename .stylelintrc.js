@@ -10,6 +10,7 @@ export default {
   rules: {
     'selector-class-pattern': '[a-zA-Z]+(_[a-zA-Z]+)*',
     'at-rule-no-unknown': null,
-    'scss/at-rule-no-unknown': true,
+    'scss/at-rule-no-unknown': null,
+    'property-no-vendor-prefix': null,
   },
 }

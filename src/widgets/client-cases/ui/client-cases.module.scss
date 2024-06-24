@@ -32,7 +32,11 @@
 .client_cases__previews {
   @apply grid px-[16px] py-[12px] gap-[16px] max-h-[300px] mx-[12px] relative overflow-y-auto rounded-[10px];
 
-  grid-template-columns: repeat(auto-fit, minmax(124px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+
+  @media screen and (width > 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .client_cases__preview_button {

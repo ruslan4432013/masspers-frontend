@@ -20,7 +20,7 @@ export const TaskSolvers = () => {
         <SelectSolveType />
       </div>
       <div className="border border-primary-500 px-[10px] pt-[65px] pb-[48px] flex flex-col items-center justify-center gap-[30px] rounded-[10px] mt-[31px] md:mt-0 md:gap-[40px] md:w-full">
-        <div className="md:grid md:grid-cols-2 md:w-full md:justify-items-center gap-y-[92px] xl:grid-cols-4">
+        <div className="flex flex-col md:grid md:grid-cols-2 md:w-full md:justify-items-center gap-10 md:gap-y-[92px] xl:grid-cols-4">
           <SolveItem
             text={
               'Личные сообщения с поздравлениями или иными оповещениями оповещениями'

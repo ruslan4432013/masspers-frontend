@@ -22,17 +22,17 @@ export const OurTeam = () => {
         <Image
           className={s.our_team__image}
           src={clientImg}
-          alt={'client image'}
+          alt={'client image 1'}
         />
         <Image
           className={s.our_team__image}
           src={clientImg}
-          alt={'client image'}
+          alt={'client image2'}
         />
         <Image
           className={s.our_team__image}
           src={clientImg}
-          alt={'client image'}
+          alt={'client image3'}
         />
         <Image
           className={s.our_team__image}

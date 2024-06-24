@@ -3,7 +3,7 @@ import Link from 'next/link'
 import s from './case-slide.module.scss'
 import { RedArrow } from '@/shared/ui/red-arrow'
 
-type Props = {
+interface Props {
   caseImg: string
   title: string
   description: string

@@ -4,7 +4,7 @@ import { Pagination } from 'swiper/modules'
 import s from './news-swiper.module.scss'
 import { Children, ReactNode, useCallback, useState } from 'react'
 
-type Props = {
+interface Props {
   children: ReactNode[]
 }
 

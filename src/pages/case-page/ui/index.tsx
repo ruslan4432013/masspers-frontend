@@ -7,7 +7,7 @@ import { ApplicationForm } from '@/widgets/application-form'
 
 const Cases = () => {
   return (
-    <div>
+    <section>
       <CasesPreview />
       <div className={s.case_page__tabs}>
         <SelectCaseOrganisation />
@@ -19,7 +19,7 @@ const Cases = () => {
       <div className="mt-[60px] md:mt-[80px]">
         <ApplicationForm />
       </div>
-    </div>
+    </section>
   )
 }
 

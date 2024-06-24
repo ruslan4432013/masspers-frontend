@@ -7,7 +7,7 @@ import { TelegramIcon } from './social-media-logos/telegram-icon'
 import { VkIcon } from './social-media-logos/vk-icon'
 import cn from 'classnames'
 
-type Props = {
+interface Props {
   className?: string
 }
 

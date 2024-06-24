@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import cn from 'classnames'
 
-type Props = {
+interface Props {
   previewImg: string
   title: string
   subtitle: string
@@ -12,7 +12,12 @@ type Props = {
 export const NewsSlide = (props: Props) => {
   const { previewImg, title, subtitle, date, className } = props
   return (
-    <div className={cn(className, 'flex flex-col gap-[22px] px-[11px]')}>
+    <div
+      className={cn(
+        className,
+        'flex flex-col gap-[22px] pb-[75px] px-[11px] md:pb-0'
+      )}
+    >
       <div className="rounded-[10px] overflow-hidden aspect-video">
         <Image
           className={'w-full'}

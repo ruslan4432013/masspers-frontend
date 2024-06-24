@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
-import './globals.css'
+import './globals.scss'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
 }
 
-type Props = {
+interface Props {
   children: ReactNode
 }
 

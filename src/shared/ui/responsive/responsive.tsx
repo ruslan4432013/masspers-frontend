@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import cn from 'classnames'
 
-type Props = {
+interface Props {
   mobile: ReactNode
   desktop: ReactNode
   className?: string

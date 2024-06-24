@@ -1,7 +1,8 @@
-import type { Config } from 'tailwindcss'
+import { Config } from 'tailwindcss'
 
 const config: Config = {
-  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}', './app/**/*.{js,ts,jsx,tsx,mdx}'],
+  content: ['./app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
+  plugins: [],
   theme: {
     container: {
       center: true,
@@ -22,6 +23,5 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
 }
 export default config

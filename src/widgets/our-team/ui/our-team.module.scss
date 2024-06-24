@@ -13,7 +13,7 @@
 }
 
 .our_team__images {
-  @apply max-h-[285px] overflow-auto flex flex-col gap-[6px] mt-[19px] pr-[16px] md:order-3 md:shrink-0 xl:mt-0 mb-[21px];
+  @apply max-h-[285px] overflow-x-hidden overflow-y-auto flex flex-col gap-[6px] mt-[19px] pr-[16px] md:order-3 md:shrink-0 xl:mt-0 mb-[21px];
 }
 
 .our_team__image {

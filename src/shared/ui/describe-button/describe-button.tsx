@@ -7,7 +7,7 @@ import cn from 'classnames'
 import Link from 'next/link'
 import { RedArrow } from '../red-arrow'
 
-type Props = {
+interface Props {
   title: string
   description: string
   isActive: boolean

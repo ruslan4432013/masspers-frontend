@@ -9,6 +9,7 @@
 
   margin: 0;
   padding: 0;
+  -webkit-appearance: none;
 
   &::-webkit-scrollbar {
     width: 6px;
@@ -45,19 +46,20 @@
   --swiper-pagination-bullet-width: 12px;
   --swiper-pagination-bullet-height: 12px;
   --swiper-navigation-sides-offset: -20px;
-  @media screen and (min-width: 1440px) {
+
+  @media screen and (width >= 1440px) {
     --swiper-navigation-sides-offset: -60px;
   }
 }
 
-.swiper-button-prev:after,
-.swiper-button-next:after {
+.swiper-button-prev::after,
+.swiper-button-next::after {
   color: #ee4143;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-  @media screen and (max-width: 1023px) {
+  @media screen and (width <= 1023px) {
     display: none !important;
   }
 }

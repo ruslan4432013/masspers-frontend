@@ -1,3 +1,22 @@
+.select_wrapper {
+  @apply relative;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 1000;
+    display: block;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top: 0;
+    border-top: 10px solid #ee4143;
+    transform: translateY(-50%);
+    content: '';
+  }
+}
+
 .select {
   @apply bg-white border border-gray-300 text-dark-500 text-[16px] rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full py-[21px] pl-[15px];
 

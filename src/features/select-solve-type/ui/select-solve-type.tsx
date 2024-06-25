@@ -1,15 +1,18 @@
 'use client'
 import cn from 'classnames'
 import s from './select-solve-type.module.scss'
-import { useState } from 'react'
+import { useEffect } from 'react'
 import { Select } from '@/shared/ui/select'
+import { useCustomSearchParams } from '@/shared/lib/hooks/use-custom-search-params'
+import { SOLVE_KEY } from '@/entities/tasks/tasks.constants'
 
-interface SelectProps {
+type SelectProps = {
   onChange: (value: string) => void
   value: string
+  options: string[]
 }
 
-const MobileSelect = ({ onChange, value }: SelectProps) => {
+const MobileSelect = ({ onChange, value, options }: SelectProps) => {
   return (
     <Select
       name="solves"
@@ -19,15 +22,16 @@ const MobileSelect = ({ onChange, value }: SelectProps) => {
         onChange(e.currentTarget.value)
       }}
     >
-      <option value="attraction">Привлечение</option>
-      <option value="sales">Продажи</option>
-      <option value="hold">Удержание</option>
-      <option value="return">Возвращение</option>
+      {options.map((el) => (
+        <option key={el} value={el}>
+          {el}
+        </option>
+      ))}
     </Select>
   )
 }
 
-interface TabProps {
+type TabProps = {
   text: string
   value: string
   isActive?: boolean
@@ -50,45 +54,58 @@ const Tab = ({ text, isActive, onClick, value }: TabProps) => {
   )
 }
 
-const DesktopSelect = ({ onChange, value }: SelectProps) => {
+const DesktopSelect = ({ onChange, value, options }: SelectProps) => {
   return (
     <div className="hidden md:flex md:ml-auto md:justify-end md:mr-[15px] xl:mr-[289px]">
-      <Tab
-        value="attraction"
-        text={'Привлечение'}
-        onClick={onChange}
-        isActive={value === 'attraction'}
-      />
-      <Tab
-        value="sales"
-        text={'Продажи'}
-        onClick={onChange}
-        isActive={value === 'sales'}
-      />
-      <Tab
-        value="hold"
-        text={'Удержание'}
-        onClick={onChange}
-        isActive={value === 'hold'}
-      />
-      <Tab
-        value="return"
-        text={'Возвращение'}
-        onClick={onChange}
-        isActive={value === 'return'}
-      />
+      {options.map((el) => (
+        <Tab
+          key={el}
+          isActive={value === el}
+          text={el}
+          value={el}
+          onClick={onChange}
+        />
+      ))}
     </div>
   )
 }
 
-export const SelectSolveType = () => {
-  const [value, setValue] = useState('attraction')
+type Props = {
+  options: string[]
+}
+
+export const SelectSolveType = ({ options }: Props) => {
+  const queryParams = useCustomSearchParams()
+  const queryValue = queryParams.get(SOLVE_KEY)
+
+  const handleChange = (newValue: string) => {
+    queryParams.set(SOLVE_KEY, newValue)
+  }
+
+  useEffect(() => {
+    if (queryValue !== options[0]) {
+      handleChange(options[0])
+    }
+  }, [options.join(',')])
+
+  if (!queryValue) {
+    return <div />
+  }
+
   return (
     <div>
       <div className={'md:hidden'}>
-        <MobileSelect value={value} onChange={setValue} />
+        <MobileSelect
+          options={options}
+          value={queryValue}
+          onChange={handleChange}
+        />
       </div>
-      <DesktopSelect value={value} onChange={setValue} />
+      <DesktopSelect
+        options={options}
+        value={queryValue}
+        onChange={handleChange}
+      />
     </div>
   )
 }

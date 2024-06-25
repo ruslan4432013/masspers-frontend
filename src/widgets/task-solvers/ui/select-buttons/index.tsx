@@ -1,8 +1,7 @@
 'use client'
 import { Button } from '@/shared/ui/button'
-import { useState } from 'react'
-
-type Value = 'solves' | 'marketing' | 'staff'
+import { useCustomSearchParams } from '@/shared/lib/hooks/use-custom-search-params'
+import { useEffect } from 'react'
 
 const variantFor = (isActive: boolean) => {
   if (isActive) {
@@ -11,36 +10,40 @@ const variantFor = (isActive: boolean) => {
   return 'secondary'
 }
 
-export const SelectButtons = () => {
-  const [value, setValue] = useState<Value>('solves')
+type Props = {
+  departments: string[]
+}
 
-  const handleChange = (newValue: Value) => () => {
-    setValue(newValue)
+const DEPARTMENT_KEY = 'department'
+
+export const SelectButtons = (props: Props) => {
+  const { departments } = props
+
+  const params = useCustomSearchParams()
+  const queryValue = params.get(DEPARTMENT_KEY)
+
+  const handleChange = (newValue: string) => () => {
+    params.set(DEPARTMENT_KEY, newValue)
   }
+
+  useEffect(() => {
+    if (!queryValue && departments[0]) {
+      handleChange(departments[0])
+    }
+  }, [])
 
   return (
     <div className="flex flex-col items-center justify-center w-full gap-[8px] mt-[40px] md:flex-row md:items-start md:mt-0 xl:items-end xl:justify-start">
-      <Button
-        className="w-full md:w-fit"
-        variant={variantFor(value === 'solves')}
-        onClick={handleChange('solves')}
-      >
-        Продажи
-      </Button>
-      <Button
-        className="w-full md:w-fit"
-        variant={variantFor(value === 'marketing')}
-        onClick={handleChange('marketing')}
-      >
-        Маркетинг
-      </Button>
-      <Button
-        className="w-full md:w-fit"
-        variant={variantFor(value === 'staff')}
-        onClick={handleChange('staff')}
-      >
-        Кадры
-      </Button>
+      {departments.map((departament) => (
+        <Button
+          key={departament}
+          className="w-full md:w-fit"
+          variant={variantFor(queryValue === departament)}
+          onClick={handleChange(departament)}
+        >
+          {departament}
+        </Button>
+      ))}
     </div>
   )
 }

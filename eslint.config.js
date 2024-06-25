@@ -3,7 +3,6 @@ import tseslint from 'typescript-eslint'
 import pluginReactConfig from 'eslint-plugin-react/configs/recommended.js'
 import eslintConfigPrettier from 'eslint-config-prettier'
 import { fixupConfigRules } from '@eslint/compat'
-import hooksPlugin from 'eslint-plugin-react-hooks'
 import sonarjs from 'eslint-plugin-sonarjs'
 
 export default tseslint.config(
@@ -16,15 +15,16 @@ export default tseslint.config(
   ...tseslint.configs.recommended,
   ...fixupConfigRules(pluginReactConfig),
   {
+    rules: {
+      '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+    },
+  },
+  {
     settings: {
       react: {
         version: 'detect',
       },
     },
-    plugins: {
-      'react-hooks': hooksPlugin,
-    },
-    rules: hooksPlugin.configs.recommended.rules,
   },
   {
     rules: {

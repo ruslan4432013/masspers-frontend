@@ -1,4 +1,3 @@
-import React from 'react'
 import { IssueSolution } from '@/entities/issue-solution'
 
 const list = [

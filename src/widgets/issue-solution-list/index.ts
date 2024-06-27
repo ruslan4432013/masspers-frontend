@@ -1,1 +1,1 @@
-export {} from './ui'
+export { IssueSolutionList } from './ui'

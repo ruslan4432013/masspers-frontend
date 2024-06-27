@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import cn from 'classnames'
 
-interface Props {
+type Props = {
   previewImg: string
   title: string
   subtitle: string

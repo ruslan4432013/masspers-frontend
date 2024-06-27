@@ -1,0 +1,9 @@
+.border_red {
+  @apply md:border md:border-primary-500 md:rounded-[10px];
+}
+
+@media screen and (width >= 1200px) {
+  .border_red {
+    @apply border border-primary-500 rounded-[10px];
+  }
+}

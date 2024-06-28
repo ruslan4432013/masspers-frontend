@@ -7,7 +7,12 @@ import { SolveItems } from '@/widgets/task-solvers/ui/solve-items'
 import { Suspense } from 'react'
 
 export const TaskSolvers = async () => {
-  const tasks = await getTasks()
+  let tasks
+  try {
+    tasks = await getTasks()
+  } catch (e) {
+    return <div>Server Error...</div>
+  }
   const departments = getDepartmentsFor(tasks)
   return (
     <div className="flex flex-col items-center justify-center w-full px-[10px] md:items-start md:px-[20px] xl:container">

@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 type Props = {
   text: string
   image: string
@@ -6,7 +8,7 @@ type Props = {
 export const SolveItem = ({ text, image }: Props) => {
   return (
     <div className="flex flex-col items-center justify-center gap-[28px] md:max-w-[327px]">
-      <img
+      <Image
         src={image}
         alt={text.slice(0, 20)}
         width={80}

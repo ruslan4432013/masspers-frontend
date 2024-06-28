@@ -3,10 +3,12 @@ import { OurTeam } from '@/widgets/our-team'
 import { ApplicationForm } from '@/widgets/application-form'
 import { IssueSolutionList } from '@/widgets/issue-solution-list'
 import { Values } from '@/widgets/values'
+import { CasesPreview } from '@/widgets/cases-preview'
 
 const TasksPage = () => {
   return (
     <section>
+      <CasesPreview />
       <div>
         <TaskSolvers />
       </div>

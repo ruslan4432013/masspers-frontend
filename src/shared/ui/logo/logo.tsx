@@ -4,7 +4,7 @@ import cn from 'classnames'
 import { LogoLaptop } from './logo.laptop'
 import { LogoDesktop } from './logo.desktop'
 
-interface Props {
+type Props = {
   className?: string
 }
 export const Logo = ({ className }: Props) => {

@@ -1,6 +1,6 @@
 import { DescribeButton } from '@/shared/ui/describe-button'
 
-interface Props {
+type Props = {
   className?: string
   title: string
   description: string

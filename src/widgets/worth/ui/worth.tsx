@@ -1,15 +1,14 @@
 import Image from 'next/image'
-import s from './values.module.scss'
+import s from './worth.module.scss'
 
-import dialog from '@/widgets/values/ui/temp-img/dialog.png'
-import crown from '@/widgets/values/ui/temp-img/crown.png'
-import paper from '@/widgets/values/ui/temp-img/paper.png'
-import handshake from '@/widgets/values/ui/temp-img/handshake.png'
-import documents from '@/widgets/values/ui/temp-img/documents.png'
-import clock from '@/widgets/values/ui/temp-img/clock.png'
-import cn from 'classnames'
+import dialog from '@/widgets/worth/ui/temp-img/dialog.png'
+import crown from '@/widgets/worth/ui/temp-img/crown.png'
+import paper from '@/widgets/worth/ui/temp-img/paper.png'
+import handshake from '@/widgets/worth/ui/temp-img/handshake.png'
+import documents from '@/widgets/worth/ui/temp-img/documents.png'
+import clock from '@/widgets/worth/ui/temp-img/clock.png'
 
-const values = [
+const worth = [
   {
     image: dialog,
     text: 'Моментальная связь с каждым клиентом',
@@ -36,19 +35,19 @@ const values = [
   },
 ]
 
-export const Values = () => {
+export const Worth = () => {
   return (
-    <div className={s.values}>
-      <div className={s.values__point_title}>
-        <h3 className={s.values__point}>Ценность</h3>
-        <h4 className={cn(s.values__title, 'text-shadow-custom')}>
+    <div className={s.worth}>
+      <div className={s.worth__point_title}>
+        <h3 className={s.worth__point}>Ценность</h3>
+        <h4 className={s.worth__title}>
           Какую ценность получает клиент MassPress?
         </h4>
       </div>
 
-      <div className={s.values__inner__container}>
-        {values.map((value, idx) => (
-          <div key={idx} className={s.value__container}>
+      <div className={s.worth__inner__container}>
+        {worth.map((value, idx) => (
+          <div key={idx} className={s.worth__item__container}>
             <div className={s.img__container}>
               <Image
                 src={value.image}

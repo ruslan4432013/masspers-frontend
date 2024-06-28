@@ -1,6 +1,5 @@
 import { IssueSolution } from '@/entities/issue-solution'
 import s from './issue-solution-list.module.scss'
-import cn from 'classnames'
 
 const list = [
   {
@@ -35,9 +34,7 @@ export const IssueSolutionList = () => {
       <div className={s.issue_solution_list__wrapper}>
         <div className={s.issue_solution_list__point_title}>
           <h3 className={s.issue_solution_list__point}>Проблемы и решение</h3>
-          <h4
-            className={cn(s.issue_solution_list__title, 'text-shadow-custom')}
-          >
+          <h4 className={s.issue_solution_list__title}>
             Какие боли снимает MassPers и как?
           </h4>
         </div>

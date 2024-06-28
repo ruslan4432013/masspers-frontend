@@ -23,7 +23,7 @@ export const ApplicationForm = (props: Props) => {
     <div className={containerClass}>
       <div className={wrapperClass}>
         <div className={s.application_form__text_wrapper}>
-          <h5 className={cn(s.application_form__title, 'text-shadow-custom')}>
+          <h5 className={s.application_form__title}>
             Хотите познакомиться получше?
           </h5>
           <p className={s.application_form__text}>

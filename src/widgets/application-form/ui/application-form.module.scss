@@ -21,6 +21,8 @@
 
 .application_form__title {
   @apply text-primary-500 text-[32px] uppercase text-center font-normal md:text-start xl:text-[62px];
+
+  text-shadow: var(--text-shadow);
 }
 
 .application_form__text {

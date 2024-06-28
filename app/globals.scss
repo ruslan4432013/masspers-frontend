@@ -6,6 +6,7 @@
   --sb-track-color: #d9d9d9;
   --sb-thumb-color: #f00;
   --sb-size: 6px;
+  --text-shadow: 5px 3px 10.2px #0000004f;
 
   margin: 0;
   padding: 0;
@@ -62,8 +63,4 @@
   @media screen and (width <= 1023px) {
     display: none !important;
   }
-}
-
-.text-shadow-custom {
-  text-shadow: 5px 3px 10.2px #0000004f;
 }

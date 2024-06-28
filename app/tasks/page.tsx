@@ -20,7 +20,7 @@ const TasksPage = () => {
         <OurTeam />
       </div>
       <div className="mt-[60px] md:mt-[80px]">
-        <ApplicationForm />
+        <ApplicationForm variant="secondary" />
       </div>
     </section>
   )

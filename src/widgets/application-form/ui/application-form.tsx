@@ -1,22 +1,38 @@
 import { Input } from '@/shared/ui/input'
 import { Select } from '@/shared/ui/select'
 import { Button } from '@/shared/ui/button'
+import s from './application-form.module.scss'
+import cn from 'classnames'
 
-export const ApplicationForm = () => {
+type Props = {
+  variant?: 'primary' | 'secondary'
+}
+
+export const ApplicationForm = (props: Props) => {
+  const { variant = 'primary' } = props
+  const containerClass = cn({
+    [s.application_form__container]: variant === 'primary',
+    [s.application_form__container__secondary]: variant === 'secondary',
+  })
+  const wrapperClass = cn({
+    [s.application_form__wrapper]: true,
+    [s.border_red]: variant === 'secondary',
+  })
+
   return (
-    <div className="bg-[#f3f3f3]">
-      <div className="flex flex-col px-[12px] py-[60px] gap-[48px] md:flex-row md:gap-[24px] md:grid md:grid-cols-2 md:items-center md:px-[65px] md:py-[46px] xl:gap-[152px] xl:container">
-        <div className="flex flex-col gap-[28px] md:gap-[13px]">
-          <h5 className="text-primary-500 text-[32px] uppercase text-center font-normal md:text-start xl:text-[62px]">
+    <div className={containerClass}>
+      <div className={wrapperClass}>
+        <div className={s.application_form__text_container}>
+          <h5 className={cn(s.application_form__title, 'text-shadow-custom')}>
             Хотите познакомиться получше?
           </h5>
-          <p className="text-center font-normal text-[16px] text-dark-500 md:text-start">
+          <p className={s.application_form__text}>
             Оставьте заявку и наши специалисты расскажут вам, как наша команда и
             наш продукт будут полезны именно вашему бизнесу
           </p>
         </div>
-        <div className="md:flex-grow md:shrink-0">
-          <div className="flex flex-col gap-[10px]">
+        <div className={s.form__container}>
+          <div className={s.form__wrapper}>
             <Input placeholder={'Как к вам обращаться?'} />
             <Input placeholder={'Наименование вашей компании'} />
             <Input placeholder={'Ваш контактный телефон'} />
@@ -28,9 +44,7 @@ export const ApplicationForm = () => {
               <option value="big">Большой бизнес</option>
             </Select>
           </div>
-          <Button className={'uppercase w-full mt-[10px]'}>
-            Свяжитесь со мной
-          </Button>
+          <Button className={s.form__button}>Свяжитесь со мной</Button>
         </div>
       </div>
     </div>

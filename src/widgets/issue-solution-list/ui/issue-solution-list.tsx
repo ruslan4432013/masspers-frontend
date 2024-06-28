@@ -30,7 +30,7 @@ const list = [
 export const IssueSolutionList = () => {
   return (
     <div className="bg-[#f3f3f3] text-dark-500">
-      <div className="flex flex-col items-center justify-center w-full px-[10px] pt-[22px] md:pt-[40px] md:pb-[42px] md:items-start md:px-[20px] xl:container xl:flex-row xl:gap-[75px] xl:pt-[70px] xl:pb-[52px]">
+      <div className="flex flex-col items-center justify-center w-full px-[10px] pt-[22px] md:pt-[40px] md:pb-[42px] md:items-start md:px-[20px] xl:container xl:flex-row xl:gap-[75px] xl:pt-[70px] xl:pb-[52px] xl:px-[179px]">
         <div className="w-full xl:basis-[40%]">
           <h3 className="text-[22px] leading-[34px] font-medium text-center mb-[17px] md:text-[29px] md:text-start md:leading-[44px] xl:text-[29px] xl:leading-[44px]">
             Проблемы и решение

@@ -1,3 +1,5 @@
+import s from './issue-solution.module.scss'
+
 type Props = {
   issue: string
   solution: string
@@ -6,13 +8,9 @@ type Props = {
 export const IssueSolution = (props: Props) => {
   const { issue, solution } = props
   return (
-    <div className="flex flex-col pt-[29px] pb-[32px] gap-[49px] border-b-[1px] border-[#D2D2D2] last:border-b-0 md:flex-row md:last:border-b-[1px]">
-      <span className="text-[16px] leading-[21px] font-normal text-center md:basis-[45%] md:text-start xl:basis-[50%]">
-        {issue}
-      </span>
-      <span className="text-[16px] leading-[21px] font-normal text-center md:basis-[55%] md:text-start xl:basis-[50%]">
-        {solution}
-      </span>
+    <div className={s.issue_solution}>
+      <span className={s.issue_solution__issue}>{issue}</span>
+      <span className={s.issue_solution__solution}>{solution}</span>
     </div>
   )
 }

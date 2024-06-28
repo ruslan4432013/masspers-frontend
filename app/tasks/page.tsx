@@ -16,7 +16,7 @@ const TasksPage = () => {
       <div className="mt-[60px] md:mt-[80px] xl:mt-[98px]">
         <Values />
       </div>
-      <div className="mt-[68px] md:mt-[80px] xl:mt-[90px]">
+      <div className="mt-[68px] md:mt-[80px] xl:mt-[145px]">
         <OurTeam />
       </div>
       <div className="mt-[60px] md:mt-[80px]">

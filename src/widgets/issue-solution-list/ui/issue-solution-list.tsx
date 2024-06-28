@@ -1,4 +1,6 @@
 import { IssueSolution } from '@/entities/issue-solution'
+import s from './issue-solution-list.module.scss'
+import cn from 'classnames'
 
 const list = [
   {
@@ -29,23 +31,21 @@ const list = [
 
 export const IssueSolutionList = () => {
   return (
-    <div className="bg-[#f3f3f3] text-dark-500">
-      <div className="flex flex-col items-center justify-center w-full px-[10px] pt-[22px] md:pt-[40px] md:pb-[42px] md:items-start md:px-[20px] xl:container xl:flex-row xl:gap-[75px] xl:pt-[70px] xl:pb-[52px] xl:px-[179px]">
-        <div className="w-full xl:basis-[40%]">
-          <h3 className="text-[22px] leading-[34px] font-medium text-center mb-[17px] md:text-[29px] md:text-start md:leading-[44px] xl:text-[29px] xl:leading-[44px]">
-            Проблемы и решение
-          </h3>
-          <h4 className="text-primary-500 text-[32px] leading-[41px] uppercase text-center font-medium mb-[1px] shadow-title md:text-start xl:text-[53px] xl:leading-[68px]">
+    <div className={s.issue_solution_list}>
+      <div className={s.issue_solution_list__wrapper}>
+        <div className={s.issue_solution_list__point_title}>
+          <h3 className={s.issue_solution_list__point}>Проблемы и решение</h3>
+          <h4
+            className={cn(s.issue_solution_list__title, 'text-shadow-custom')}
+          >
             Какие боли снимает MassPers и как?
           </h4>
         </div>
 
-        <div className="w-full xl:basis-[60%]">
-          <div className="hidden xl:flex xl:flex-row xl:pb-[23px] xl:border-b-[1px] xl:border-[#EE4143] xl:gap-[49px] xl:mb-[26px]">
-            <span className="text-[29px] leading-[44px] font-medium text-start xl:basis-[50%]">
-              Боли
-            </span>
-            <span className="text-[29px] leading-[44px] font-medium text-start xl:basis-[50%]">
+        <div className={s.issue_solution_list__inner__container}>
+          <div className={s.issue_solution_list__only_xl}>
+            <span className={s.issue_solution_list__only_xl__text}>Боли</span>
+            <span className={s.issue_solution_list__only_xl__text}>
               Решение
             </span>
           </div>

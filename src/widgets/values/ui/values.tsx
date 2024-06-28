@@ -53,8 +53,8 @@ export const Values = () => {
               <Image
                 src={value.image}
                 alt={value.text.slice(0, 20)}
-                width={80}
-                height={100}
+                width={86}
+                height={86}
                 className={s.img}
               />
             </div>

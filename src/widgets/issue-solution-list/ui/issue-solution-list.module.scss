@@ -5,7 +5,7 @@
 .issue_solution_list__wrapper {
   @apply flex flex-col items-center justify-center w-full px-[10px] pt-[22px]
   md:pt-[40px] md:pb-[42px] md:items-start md:px-[20px] xl:container xl:flex-row xl:gap-[75px]
-  xl:pt-[70px] xl:pb-[52px] xl:px-[179px];
+  xl:pt-[70px] xl:pb-[52px];
 }
 
 .issue_solution_list__point_title {

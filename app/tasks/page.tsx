@@ -3,13 +3,13 @@ import { OurTeam } from '@/widgets/our-team'
 import { ApplicationForm } from '@/widgets/application-form'
 import { IssueSolutionList } from '@/widgets/issue-solution-list'
 import { Worth } from '@/widgets/worth'
-import { CasesPreview } from '@/widgets/cases-preview'
+import { TasksPreview } from '@/widgets/tasks-preview'
 
 const TasksPage = () => {
   return (
     <section>
-      <CasesPreview />
-      <div>
+      <TasksPreview />
+      <div className="mt-[60px] md:mt-[80px] xl:mt-[93px]">
         <TaskSolvers />
       </div>
       <div className="mt-[60px] md:mt-[80px]">

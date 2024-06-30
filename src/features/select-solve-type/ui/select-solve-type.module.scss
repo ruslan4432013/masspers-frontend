@@ -1,3 +1,7 @@
 .active_button {
   @apply text-primary-500 border border-b-0 border-primary-500 rounded-tl-[10px] rounded-tr-[10px] bg-white;
 }
+
+.desktop_select {
+  @apply hidden md:flex md:ml-auto md:justify-end md:mr-[15px] xl:mr-[289px];
+}

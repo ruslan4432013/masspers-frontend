@@ -10,6 +10,7 @@ type SelectProps = {
   onChange: (value: string) => void
   value: string
   options: string[]
+  className?: string
 }
 
 const MobileSelect = ({ onChange, value, options }: SelectProps) => {
@@ -54,9 +55,14 @@ const Tab = ({ text, isActive, onClick, value }: TabProps) => {
   )
 }
 
-const DesktopSelect = ({ onChange, value, options }: SelectProps) => {
+const DesktopSelect = ({
+  onChange,
+  value,
+  options,
+  className,
+}: SelectProps) => {
   return (
-    <div className="hidden md:flex md:ml-auto md:justify-end md:mr-[15px] xl:mr-[289px]">
+    <div className={cn(s.desktop_select, className)}>
       {options.map((el) => (
         <Tab
           key={el}
@@ -72,9 +78,10 @@ const DesktopSelect = ({ onChange, value, options }: SelectProps) => {
 
 type Props = {
   options: string[]
+  className?: string
 }
 
-export const SelectSolveType = ({ options }: Props) => {
+export const SelectSolveType = ({ options, className }: Props) => {
   const queryParams = useCustomSearchParams()
   const queryValue = queryParams.get(SOLVE_KEY)
 
@@ -105,6 +112,7 @@ export const SelectSolveType = ({ options }: Props) => {
         options={options}
         value={queryValue}
         onChange={handleChange}
+        className={className}
       />
     </div>
   )

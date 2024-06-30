@@ -1,0 +1,42 @@
+.application_form__container__primary {
+  @apply bg-[#f3f3f3];
+}
+
+.application_form__container__secondary {
+  @apply bg-[#f3f3f3] md:bg-inherit;
+}
+
+.border_red {
+  @apply md:border md:border-primary-500 md:rounded-[10px];
+}
+
+.application_form__wrapper {
+  @apply flex flex-col px-[12px] py-[60px] gap-[48px] md:mx-[20px] md:flex-row md:gap-[24px] md:grid
+  md:grid-cols-2 md:items-center md:px-[65px] md:py-[46px] xl:mx-auto xl:gap-[152px] xl:container;
+}
+
+.application_form__text_wrapper {
+  @apply flex flex-col gap-[28px] md:gap-[13px];
+}
+
+.application_form__title {
+  @apply text-primary-500 text-[32px] uppercase text-center font-normal md:text-start xl:text-[62px];
+
+  text-shadow: var(--text-shadow);
+}
+
+.application_form__text {
+  @apply text-center font-normal text-[16px] text-dark-500 md:text-start;
+}
+
+.form__container {
+  @apply md:flex-grow md:shrink-0;
+}
+
+.form__wrapper {
+  @apply flex flex-col gap-[10px];
+}
+
+.form__button {
+  @apply uppercase w-full mt-[10px];
+}

@@ -10,6 +10,7 @@ type SelectProps = {
   onChange: (value: string) => void
   value: string
   options: string[]
+  justifyStart?: boolean
 }
 
 const MobileSelect = ({ onChange, value, options }: SelectProps) => {
@@ -54,9 +55,18 @@ const Tab = ({ text, isActive, onClick, value }: TabProps) => {
   )
 }
 
-const DesktopSelect = ({ onChange, value, options }: SelectProps) => {
+const DesktopSelect = ({
+  onChange,
+  value,
+  options,
+  justifyStart = false,
+}: SelectProps) => {
   return (
-    <div className="hidden md:flex md:ml-auto md:justify-end md:mr-[15px] xl:mr-[289px]">
+    <div
+      className={cn(s.desktop_select, {
+        [s.desktop_select__justify_start]: justifyStart,
+      })}
+    >
       {options.map((el) => (
         <Tab
           key={el}
@@ -72,9 +82,10 @@ const DesktopSelect = ({ onChange, value, options }: SelectProps) => {
 
 type Props = {
   options: string[]
+  justifyStart?: boolean
 }
 
-export const SelectSolveType = ({ options }: Props) => {
+export const SelectSolveType = ({ options, justifyStart }: Props) => {
   const queryParams = useCustomSearchParams()
   const queryValue = queryParams.get(SOLVE_KEY)
 
@@ -105,6 +116,7 @@ export const SelectSolveType = ({ options }: Props) => {
         options={options}
         value={queryValue}
         onChange={handleChange}
+        justifyStart={justifyStart}
       />
     </div>
   )

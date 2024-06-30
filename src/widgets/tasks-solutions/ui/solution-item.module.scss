@@ -1,0 +1,16 @@
+.solve_item {
+  @apply flex flex-col items-center justify-center gap-[28px] md:w-full md:flex-row md:gap-[17px]
+  md:justify-start;
+
+  &__img_container {
+    @apply xl:w-[100px] xl:h-[100px] xl:flex xl:items-center xl:justify-center;
+  }
+
+  &__image {
+    @apply w-[100px] h-auto max-w-none;
+  }
+
+  &__text {
+    @apply text-[16px] leading-[21px] text-center font-medium text-dark-500 md:text-start;
+  }
+}

@@ -52,8 +52,8 @@ export const Worth = () => {
               <Image
                 src={value.image}
                 alt={value.text.slice(0, 20)}
-                width={86}
-                height={86}
+                width={100}
+                height={100}
                 className={s.img}
               />
             </div>

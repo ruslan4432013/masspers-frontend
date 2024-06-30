@@ -1,0 +1,4 @@
+.solution_items {
+  @apply flex flex-col gap-y-[36px] md:w-full md:justify-start
+  md:gap-y-[31px] xl:grid-cols-4;
+}

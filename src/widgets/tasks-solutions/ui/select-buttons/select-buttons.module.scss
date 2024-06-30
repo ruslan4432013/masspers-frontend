@@ -1,0 +1,8 @@
+.select_buttons {
+  @apply flex flex-col items-center justify-center w-full gap-[8px] md:flex-row md:items-start
+  md:justify-start xl:items-end xl:justify-start;
+
+  &__button {
+    @apply w-full font-medium text-[16px] leading-[21px] uppercase md:w-fit md:px-[23px] md:py-[20px];
+  }
+}

@@ -10,7 +10,7 @@ type SelectProps = {
   onChange: (value: string) => void
   value: string
   options: string[]
-  justifyStart?: boolean
+  className?: string
 }
 
 const MobileSelect = ({ onChange, value, options }: SelectProps) => {
@@ -59,14 +59,10 @@ const DesktopSelect = ({
   onChange,
   value,
   options,
-  justifyStart = false,
+  className,
 }: SelectProps) => {
   return (
-    <div
-      className={cn(s.desktop_select, {
-        [s.desktop_select__justify_start]: justifyStart,
-      })}
-    >
+    <div className={cn(s.desktop_select, className)}>
       {options.map((el) => (
         <Tab
           key={el}
@@ -82,10 +78,10 @@ const DesktopSelect = ({
 
 type Props = {
   options: string[]
-  justifyStart?: boolean
+  className?: string
 }
 
-export const SelectSolveType = ({ options, justifyStart }: Props) => {
+export const SelectSolveType = ({ options, className }: Props) => {
   const queryParams = useCustomSearchParams()
   const queryValue = queryParams.get(SOLVE_KEY)
 
@@ -116,7 +112,7 @@ export const SelectSolveType = ({ options, justifyStart }: Props) => {
         options={options}
         value={queryValue}
         onChange={handleChange}
-        justifyStart={justifyStart}
+        className={className}
       />
     </div>
   )

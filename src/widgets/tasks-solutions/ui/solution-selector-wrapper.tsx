@@ -6,7 +6,7 @@ import { SelectSolveType } from '@/features/select-solve-type'
 
 type Props = {
   tasksDTO: GetTasksDTO
-  justifyStart?: boolean
+  className?: string
 }
 
 const optionsFor = (department: string, tasksDTO: GetTasksDTO) => {
@@ -15,7 +15,7 @@ const optionsFor = (department: string, tasksDTO: GetTasksDTO) => {
 }
 
 export const SolutionSelectorWrapper = (props: Props) => {
-  const { tasksDTO, justifyStart } = props
+  const { tasksDTO, className } = props
   const params = useCustomSearchParams()
   const departament = params.get(DEPARTMENT_KEY)
   if (!departament) {
@@ -23,5 +23,5 @@ export const SolutionSelectorWrapper = (props: Props) => {
   }
 
   const options = optionsFor(departament, tasksDTO)
-  return <SelectSolveType options={options} justifyStart={justifyStart} />
+  return <SelectSolveType options={options} className={className} />
 }

@@ -36,3 +36,7 @@
     @apply w-full uppercase md:hidden;
   }
 }
+
+.tasks_solutions__solution_selector_wrapper {
+  @apply md:justify-start;
+}

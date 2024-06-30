@@ -33,7 +33,10 @@ export const TasksSolutions = async () => {
 
         <div className={s.tasks_solutions__solution_selector_container}>
           <Suspense>
-            <SolutionSelectorWrapper tasksDTO={tasks} justifyStart={true} />
+            <SolutionSelectorWrapper
+              tasksDTO={tasks}
+              className={s.tasks_solutions__solution_selector_wrapper}
+            />
           </Suspense>
         </div>
 

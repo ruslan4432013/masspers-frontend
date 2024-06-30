@@ -28,9 +28,9 @@ export const SelectButtons = (props: Props) => {
 
   useEffect(() => {
     if (!queryValue && departments[0]) {
-      handleChange(departments[0])
+      handleChange(departments[0])()
     }
-  }, [])
+  }, [queryValue, departments.join(',')])
 
   return (
     <div className="flex flex-col items-center justify-center w-full gap-[8px] mt-[40px] md:flex-row md:items-start md:mt-0 xl:items-end xl:justify-start">

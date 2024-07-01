@@ -1,0 +1,42 @@
+.case_stages {
+  @apply flex flex-col items-center justify-center w-full px-[12px] text-dark-500 md:items-start
+  md:px-[20px] xl:container xl:justify-start;
+
+  &__point_title {
+    @apply md:flex md:flex-col xl:justify-end xl:w-[80%];
+  }
+
+  &__point {
+    @apply text-[22px] leading-[34px] font-medium text-center md:text-[29px] md:leading-[44px]
+    md:text-start;
+  }
+
+  &__title {
+    @apply uppercase text-[32px] leading-[41px] text-primary-500 text-center mt-[15px] md:mt-0
+    md:text-start xl:text-[53px] xl:leading-[68px] font-normal;
+
+    text-shadow: var(--text-shadow);
+  }
+
+  &__select_buttons_container {
+    @apply w-full mt-[28px] md:mt-[40px];
+  }
+
+  &__stage_selector_container {
+    @apply mt-[30px] w-full;
+  }
+
+  &__stage_items_container {
+    @apply border border-primary-500 pt-[60px] flex flex-col items-center
+    justify-center gap-[48px] rounded-[10px] mt-[31px] md:mt-0 md:gap-[31px] md:w-full
+    md:pt-[54px] md:rounded-tl-[0] xl:pt-[68px] xl:pb-0 xl:px-0;
+  }
+
+  &__stage_items__button {
+    @apply w-full uppercase md:hidden;
+  }
+}
+
+.case_stages__stage_selector_wrapper {
+  justify-content: flex-start !important;
+}

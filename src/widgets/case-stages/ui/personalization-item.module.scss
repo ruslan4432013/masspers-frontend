@@ -1,0 +1,7 @@
+.personalization_item {
+  @apply flex flex-col items-center gap-[28px] md:max-w-[208px] md:w-full md:px-[5px];
+
+  &__description {
+    @apply text-[16px] leading-[21px] font-medium text-center;
+  }
+}

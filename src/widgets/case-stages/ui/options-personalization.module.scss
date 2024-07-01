@@ -1,0 +1,15 @@
+.options_personalization {
+  @apply flex flex-col bg-[#F3F3F3] px-[5px] py-[50px] gap-[21px] rounded-b-[10px] md:px-[44px]
+  md:pb-[68px] xl:pb-[50px] xl:flex-row xl:gap-[108px];
+
+  &__title {
+    @apply text-[32px] leading-[41px] font-medium text-center text-primary-500 uppercase
+    break-all md:text-start xl:break-normal;
+
+    text-shadow: var(--text-shadow);
+  }
+
+  &__items {
+    @apply md:flex justify-between xl:w-full;
+  }
+}

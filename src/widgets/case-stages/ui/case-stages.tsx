@@ -1,8 +1,8 @@
 import { SelectButtons } from './select-buttons'
 import React, { Suspense } from 'react'
 import s from './case-stages.module.scss'
-import { StagesSelectorWrapper } from '@/widgets/case-stages/ui/stages-selector-wrapper'
-import { StageItemsPersonalization } from '@/widgets/case-stages/ui/stage-items-personalization'
+import { StagesSelectorWrapper } from './stages-selector-wrapper'
+import { StageItemsPersonalization } from './stage-items-personalization'
 
 export const CaseStages = async () => {
   return (

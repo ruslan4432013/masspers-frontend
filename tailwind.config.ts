@@ -21,6 +21,9 @@ const config: Config = {
           500: '#EE4143',
         },
       },
+      gridTemplateColumns: {
+        '40_55': '40% 55%',
+      },
     },
   },
 }

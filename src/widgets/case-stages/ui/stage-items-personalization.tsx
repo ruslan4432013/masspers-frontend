@@ -1,7 +1,7 @@
 'use client'
 import { StageItem } from './stage-item'
 import s from './stage-items-personalization.module.scss'
-import { OptionsPersonalization } from '@/widgets/case-stages/ui/options-personalization'
+import { OptionsPersonalization } from './options-personalization'
 
 const stages = [
   {
@@ -37,7 +37,7 @@ const stages = [
 export const StageItemsPersonalization = () => {
   return (
     <div className={s.stage_items_personalization}>
-      <div className={s.stage_items_personalization__left}>
+      <div className={s.stage_items_personalization__top}>
         <div className={s.stage_items_personalization__point_title_wrapper}>
           <h3 className={s.stage_items_personalization__point}>Этапы</h3>
           <h4 className={s.stage_items_personalization__title}>
@@ -52,6 +52,11 @@ export const StageItemsPersonalization = () => {
               no={idx + 1}
               title={item.title}
               description={item.description}
+              className={
+                idx + 1 === stages.length
+                  ? s.stage_items_personalization__item_last
+                  : ''
+              }
             />
           ))}
         </div>

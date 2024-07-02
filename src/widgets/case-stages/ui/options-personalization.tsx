@@ -1,5 +1,5 @@
 import s from './options-personalization.module.scss'
-import { PersonalizationItem } from '@/widgets/case-stages/ui/personalization-item'
+import { PersonalizationItem } from './personalization-item'
 import person from './person.png'
 import hands from './hands.png'
 import wallet from './wallet.png'

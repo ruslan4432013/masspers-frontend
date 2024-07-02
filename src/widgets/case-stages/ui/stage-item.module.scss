@@ -1,9 +1,18 @@
 .stage_item {
-  @apply flex gap-[24px] md:gap-[43px];
+  @apply flex gap-[24px] pb-[38px] md:gap-[43px];
+
+  &__circle_wrapper {
+    @apply relative;
+  }
+
+  &__circle_wrapper::before {
+    @apply content-[''] absolute h-full border-[1px] border-[#E7E7E7] rounded-full z-[-1] top-[40px]
+    left-[50%];
+  }
 
   &__circle {
     @apply flex items-center justify-center shrink-0 w-10 h-10 rounded-full bg-primary-500
-    text-white text-[24px] font-medium text-center;
+    text-white text-[24px] font-medium text-center md:w-[68px] md:h-[68px];
   }
 
   &__info {

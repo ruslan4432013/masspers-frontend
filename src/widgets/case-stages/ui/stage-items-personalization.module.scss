@@ -1,8 +1,8 @@
 .stage_items_personalization {
   @apply flex flex-col text-dark-500;
 
-  &__left {
-    @apply xl:flex xl:gap-[152px] xl:mb-[84px] xl:px-[44px];
+  &__top {
+    @apply xl:grid xl:grid-cols-40_55 xl:gap-[70px] xl:mb-[84px] xl:px-[44px];
   }
 
   &__point_title_wrapper {
@@ -21,7 +21,13 @@
   }
 
   &__items {
-    @apply flex flex-col gap-[38px] mt-[56px] mb-[38px] px-[5px] md:px-[44px] md:mb-[34px] xl:px-0
+    @apply flex flex-col mt-[56px] px-[5px] md:px-[44px] md:mb-[34px] xl:px-0
     xl:my-0;
+  }
+}
+
+.stage_items_personalization__item_last {
+  &::before {
+    @apply border-0;
   }
 }

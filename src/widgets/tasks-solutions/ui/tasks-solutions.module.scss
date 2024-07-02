@@ -1,6 +1,6 @@
 .tasks_solutions {
   @apply flex flex-col items-center justify-center w-full px-[12px] text-dark-500 md:items-start
-  md:px-[20px] xl:container xl:flex-row xl:gap-[42px] xl:justify-start;
+  md:px-[20px] xl:container xl:grid xl:grid-cols-40_55 xl:gap-[42px] xl:justify-start;
 
   &__point_title {
     @apply md:flex md:flex-col xl:justify-end xl:w-[80%];
@@ -18,6 +18,10 @@
     text-shadow: var(--text-shadow);
   }
 
+  &__contant {
+    @apply w-full;
+  }
+
   &__select_buttons_container {
     @apply w-full mt-[28px] md:mt-[40px];
   }
@@ -29,7 +33,7 @@
   &__solution_items_container {
     @apply border border-primary-500 px-[10px] pt-[65px] pb-[48px] flex flex-col items-center
     justify-center gap-[48px] rounded-[10px] mt-[31px] md:mt-0 md:gap-[31px] md:w-full md:px-[30px]
-    md:py-[54px] md:rounded-tl-[0] xl:py-[68px] xl:pl-[33px] xl:pr-[200px];
+    md:py-[54px] md:rounded-tl-[0] xl:py-[68px] xl:pl-[33px] xl:pr-[90px];
   }
 
   &__solution_items__button {

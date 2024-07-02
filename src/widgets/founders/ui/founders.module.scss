@@ -1,5 +1,6 @@
 .founders {
-  @apply flex flex-col gap-[30px] px-[10px] md:px-[20px] xl:grid xl:grid-cols-24_70 xl:gap-[60px];
+  @apply flex flex-col gap-[30px] px-[10px] md:px-[20px] xl:grid xl:grid-cols-24_70 xl:gap-[60px]
+  xl:container;
 
   &__top {
     @apply flex flex-col gap-[17px] text-center md:text-start;

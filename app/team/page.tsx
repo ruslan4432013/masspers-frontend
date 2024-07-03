@@ -2,6 +2,7 @@ import { OurTeam } from '@/widgets/our-team'
 import { ApplicationForm } from '@/widgets/application-form'
 import { TeamPreview } from '@/widgets/team-preview'
 import { Founders } from '@/widgets/founders'
+import { History } from '@/widgets/history'
 
 const TeamPage = () => {
   return (
@@ -9,6 +10,9 @@ const TeamPage = () => {
       <TeamPreview />
       <div className="mt-[60px] md:mt-[80px]">
         <Founders />
+      </div>
+      <div className="mt-[80px] md:mt-[80px]">
+        <History />
       </div>
       <div className="mt-[68px] md:mt-[80px] xl:mt-[145px]">
         <OurTeam />

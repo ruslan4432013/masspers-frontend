@@ -1,0 +1,62 @@
+.history {
+  @apply px-[12px] xl:container text-dark-500;
+
+  &__point_title {
+    @apply flex flex-col;
+  }
+
+  &__point {
+    @apply text-[22px] leading-[34px] font-medium text-center md:text-[29px] md:leading-[44px]
+    md:text-start;
+  }
+
+  &__title {
+    @apply text-[32px] leading-[41px] font-medium uppercase text-primary-500 text-center mt-[17px]
+    md:mt-0 md:text-start xl:text-[53px] xl:leading-[68px];
+
+    text-shadow: var(--text-shadow);
+  }
+
+  &__select_wrapper {
+    @apply mt-[23px] relative;
+
+    &::before {
+      position: absolute;
+      top: 60%;
+      left: 0;
+      z-index: 1;
+      display: block;
+      transform: translateY(-50%);
+      content: url('./play.svg');
+    }
+  }
+
+  &__select {
+    @apply text-[16px] leading-[21px] font-medium text-primary-500 pl-[58px];
+  }
+
+  &__select option {
+    @apply pl-[5px];
+  }
+
+  &__info_wrapper {
+    @apply border border-primary-500 rounded-[10px] text-dark-500 mt-[28px] pt-[45px] pb-[40px]
+    px-[16px];
+  }
+
+  &__year {
+    @apply text-[16px] leading-[21px] font-medium text-center;
+  }
+
+  &__text {
+    @apply text-[16px] leading-[21px] font-normal text-center px-[16px] py-[20px];
+  }
+
+  &__work_with {
+    @apply block text-[16px] leading-[21px] font-medium text-center mt-[12px];
+  }
+
+  &__partners_img_wrapper {
+    @apply flex justify-center mt-[18px];
+  }
+}

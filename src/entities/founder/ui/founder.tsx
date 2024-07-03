@@ -1,5 +1,6 @@
 import s from './founder.module.scss'
 import Image, { StaticImageData } from 'next/image'
+import cn from 'classnames'
 
 type Props = {
   name: string
@@ -23,9 +24,17 @@ export const Founder = (props: Props) => {
 
         <div className={s.founder__info}>
           <p className={s.founder__info_text}>{education}</p>
-          <p className={s.founder__info_text}>{inTeam}</p>
-          <p className={s.founder__info_text}>{responsibilities}</p>
-          <p className={s.founder__info_text}>{pride}</p>
+          <p
+            className={cn(s.founder__info_text, s.founder__info_text_mr_second)}
+          >
+            {inTeam}
+          </p>
+          <p className={cn(s.founder__info_text, s.founder__info_text_mr)}>
+            {responsibilities}
+          </p>
+          <p className={cn(s.founder__info_text, s.founder__info_text_mr)}>
+            {pride}
+          </p>
         </div>
       </div>
 

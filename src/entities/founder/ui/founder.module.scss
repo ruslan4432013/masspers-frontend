@@ -1,6 +1,6 @@
 .founder {
   @apply border border-primary-500 rounded-[10px] text-dark-500 md:flex md:flex-col
-  md:justify-between;
+  md:justify-between xl:relative;
 
   &__name_who_wrapper {
     @apply flex flex-col gap-[4px] mt-[44px] text-center xl:text-start xl:pl-[31px] xl:pr-[5px];
@@ -20,14 +20,27 @@
   }
 
   &__info_text {
-    @apply text-[16px] leading-[21px] font-normal;
+    @apply text-[16px] leading-[21px] font-normal xl:z-10 xl:mr-[10px] 2xl:mr-[50px];
+  }
+
+  &__info_text:last-child {
+    @apply xl:pb-[50px];
+  }
+
+  &__info_text_mr_second {
+    @apply xl:mr-[100px] 2xl:mr-[200px];
+  }
+
+  &__info_text_mr {
+    @apply xl:mr-[230px] 2xl:mr-[280px];
   }
 
   &__photo_wrapper {
-    @apply pl-[30px] mt-[10px] xl:flex xl:justify-end;
+    @apply pl-[30px] mt-[10px] xl:absolute xl:bottom-0 xl:right-[-32px] xl:pl-0 xl:mt-0 xl:w-[280px]
+    2xl:w-[320px] 2xl:right-[-40px];
   }
 
   &__photo {
-    @apply w-full h-auto xl:max-w-[320px] xl:mr-[-36px];
+    @apply w-full h-auto;
   }
 }

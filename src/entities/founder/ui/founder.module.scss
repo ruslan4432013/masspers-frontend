@@ -1,0 +1,33 @@
+.founder {
+  @apply border border-primary-500 rounded-[10px] text-dark-500 md:flex md:flex-col
+  md:justify-between;
+
+  &__name_who_wrapper {
+    @apply flex flex-col gap-[4px] mt-[44px] text-center xl:text-start xl:pl-[31px] xl:pr-[5px];
+  }
+
+  &__name {
+    @apply text-[26px] leading-[34px] font-medium uppercase text-primary-500;
+  }
+
+  &__who {
+    @apply text-[14px] leading-[18px] font-medium uppercase;
+  }
+
+  &__info {
+    @apply px-[25px] mt-[24px] text-center flex flex-col gap-[24px] xl:text-start xl:pl-[31px]
+    xl:pr-[5px];
+  }
+
+  &__info_text {
+    @apply text-[16px] leading-[21px] font-normal;
+  }
+
+  &__photo_wrapper {
+    @apply pl-[30px] mt-[10px] xl:flex xl:justify-end;
+  }
+
+  &__photo {
+    @apply w-full h-auto xl:max-w-[320px] xl:mr-[-36px];
+  }
+}

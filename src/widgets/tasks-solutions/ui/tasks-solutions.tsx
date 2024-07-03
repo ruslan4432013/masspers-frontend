@@ -24,7 +24,7 @@ export const TasksSolutions = async () => {
         </h4>
       </div>
 
-      <div>
+      <div className={s.tasks_solutions__content}>
         <div className={s.tasks_solutions__select_buttons_container}>
           <Suspense>
             <SelectButtons departments={departments} />

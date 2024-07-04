@@ -1,3 +1,5 @@
+'use client'
+
 import s from './history.module.scss'
 import { Select } from '@/shared/ui/select'
 import { ChangeEvent, useState } from 'react'

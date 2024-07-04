@@ -1,0 +1,21 @@
+.stepContainer {
+  @apply flex flex-col gap-[6px] text-center;
+
+  &__step {
+    @apply text-[16px] leading-[21px] font-medium text-[#2CA6EB];
+  }
+
+  &__step_active {
+    @apply text-primary-500;
+  }
+
+  &__button {
+    background-image: url('inactive.svg');
+
+    @apply w-[50px] h-[50px] flex justify-center items-center relative z-[2];
+  }
+
+  &__button_active {
+    background-image: url('active.svg');
+  }
+}

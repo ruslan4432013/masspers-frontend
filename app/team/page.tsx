@@ -11,7 +11,7 @@ const TeamPage = () => {
       <div className="mt-[60px] md:mt-[80px]">
         <Founders />
       </div>
-      <div className="mt-[80px] md:mt-[80px]">
+      <div className="mt-[80px]">
         <History />
       </div>
       <div className="mt-[68px] md:mt-[80px] xl:mt-[145px]">

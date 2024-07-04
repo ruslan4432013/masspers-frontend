@@ -1,5 +1,9 @@
 .history {
-  @apply px-[12px] xl:container text-dark-500;
+  @apply md:bg-[#F3F3F3];
+
+  &__inner {
+    @apply px-[12px] text-dark-500 xl:container md:pt-[50px] md:pb-[60px];
+  }
 
   &__point_title {
     @apply flex flex-col;
@@ -7,18 +11,18 @@
 
   &__point {
     @apply text-[22px] leading-[34px] font-medium text-center md:text-[29px] md:leading-[44px]
-    md:text-start;
+    md:text-start xl:text-[29px] xl:leading-[44px];
   }
 
   &__title {
     @apply text-[32px] leading-[41px] font-medium uppercase text-primary-500 text-center mt-[17px]
-    md:mt-0 md:text-start xl:text-[53px] xl:leading-[68px];
+    md:text-start xl:text-[53px] xl:leading-[68px];
 
     text-shadow: var(--text-shadow);
   }
 
   &__select_wrapper {
-    @apply mt-[23px] relative;
+    @apply mt-[23px] relative md:hidden;
 
     &::before {
       position: absolute;
@@ -35,28 +39,42 @@
     @apply text-[16px] leading-[21px] font-medium text-primary-500 pl-[58px];
   }
 
-  &__select option {
-    @apply pl-[5px];
+  &__stepper_year {
+    @apply hidden mt-[33px] md:block md:mt-[38px];
   }
 
   &__info_wrapper {
     @apply border border-primary-500 rounded-[10px] text-dark-500 mt-[28px] pt-[45px] pb-[40px]
-    px-[16px];
+    px-[16px] md:py-[30px] md:px-[30px] xl:grid xl:grid-cols-60_40;
+  }
+
+  &__year_text_wrapper {
+    @apply md:flex md:gap-[30px];
   }
 
   &__year {
-    @apply text-[16px] leading-[21px] font-medium text-center;
+    @apply text-[16px] leading-[21px] font-medium text-center md:min-w-[100px] md:grow-0 md:text-start;
   }
 
   &__text {
-    @apply text-[16px] leading-[21px] font-normal text-center px-[16px] py-[20px];
+    @apply text-[16px] leading-[21px] font-normal text-center px-[16px] py-[20px] md:py-0 md:px-0
+    md:text-start md:grow;
+  }
+
+  &__work_partners {
+    @apply xl:grid xl:grid-cols-40_58 xl:gap-[10px];
   }
 
   &__work_with {
-    @apply block text-[16px] leading-[21px] font-medium text-center mt-[12px];
+    @apply block text-[16px] leading-[21px] font-medium text-center mt-[12px] md:text-start
+    md:mt-[32px] xl:text-center xl:mt-0;
   }
 
   &__partners_img_wrapper {
-    @apply flex justify-center mt-[18px];
+    @apply flex flex-wrap mt-[18px] gap-[10px] md:px-[12px] md:gap-[32px] xl:mt-0 xl:items-start xl:px-0;
+  }
+
+  &__img {
+    @apply rounded-[10px];
   }
 }

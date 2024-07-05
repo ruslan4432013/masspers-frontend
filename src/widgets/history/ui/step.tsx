@@ -8,10 +8,10 @@ type StepProps = {
 }
 
 export const Step = ({ step, active, handleOptionSelection }: StepProps) => (
-  <div className={s.stepContainer}>
+  <div className={s.step_container}>
     <div
-      className={cn(s.stepContainer__step, {
-        [s.stepContainer__step_active]: active,
+      className={cn(s.step_container__step, {
+        [s.step_container__step_active]: active,
       })}
     >
       {step}
@@ -22,8 +22,8 @@ export const Step = ({ step, active, handleOptionSelection }: StepProps) => (
       }}
     >
       <div
-        className={cn(s.stepContainer__button, {
-          [s.stepContainer__button_active]: active,
+        className={cn(s.step_container__button, {
+          [s.step_container__button_active]: active,
         })}
       ></div>
     </button>

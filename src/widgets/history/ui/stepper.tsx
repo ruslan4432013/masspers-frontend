@@ -16,10 +16,10 @@ export const Stepper = ({ steps, handleStepChange }: StepperProps) => {
   }
 
   return (
-    <div className={s.stepperContainer}>
-      {steps.map((step, idx) => (
+    <div className={s.stepper_container}>
+      {steps.map((step) => (
         <Step
-          key={idx + step}
+          key={step}
           handleOptionSelection={handleOptionSelection}
           step={step}
           active={step === currentOption}

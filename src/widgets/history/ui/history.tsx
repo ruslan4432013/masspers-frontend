@@ -98,8 +98,8 @@ export const History = () => {
               onChange={onYearChange}
               className={s.history__select}
             >
-              {years.map((y, idx) => (
-                <option key={y + idx}>{y}</option>
+              {years.map((y) => (
+                <option key={y}>{y}</option>
               ))}
             </Select>
           </div>

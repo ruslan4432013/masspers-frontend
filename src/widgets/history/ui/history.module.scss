@@ -71,7 +71,8 @@
   }
 
   &__partners_img_wrapper {
-    @apply flex flex-wrap mt-[18px] gap-[10px] md:px-[12px] md:gap-[32px] xl:mt-0 xl:items-start xl:px-0;
+    @apply flex flex-wrap justify-center mt-[18px] gap-[10px] md:justify-start md:px-[12px]
+    md:gap-[32px] xl:mt-0 xl:items-start xl:px-0;
   }
 
   &__img {

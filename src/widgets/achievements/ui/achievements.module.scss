@@ -1,0 +1,31 @@
+.achievements {
+  @apply px-[12px] text-dark-500 lg:grid lg:grid-cols-30_68 lg:gap-[20px] xl:container
+  xl:grid-cols-40_55 xl:gap-[40px];
+
+  &__info {
+    @apply flex flex-col gap-[17px] justify-center;
+  }
+
+  &__title {
+    @apply text-[32px] leading-[41px] font-medium uppercase text-primary-500 text-center
+    lg:text-start xl:text-[53px] xl:leading-[68px];
+
+    text-shadow: var(--text-shadow);
+  }
+
+  &__subtitle {
+    @apply text-[16px] leading-[21px] font-bold text-center lg:text-start;
+  }
+
+  &__year {
+    @apply block lg:text-start;
+  }
+
+  &__text {
+    @apply text-[16px] leading-[21px] font-normal text-center lg:text-start;
+  }
+
+  &__achievements_swiper_wrapper {
+    @apply mt-[31px];
+  }
+}

@@ -1,0 +1,21 @@
+.achievements_swiper {
+  @apply relative;
+
+  &__swiper {
+    @apply pb-[45px] px-[25px] md:pb-0;
+  }
+
+  &__swiper_slide {
+    @apply flex justify-center items-center h-[281px] rounded-[10px];
+  }
+}
+
+.pagination {
+  &__vertical {
+    bottom: 0 !important;
+  }
+
+  &__bullet_active {
+    @apply bg-primary-500 opacity-100;
+  }
+}

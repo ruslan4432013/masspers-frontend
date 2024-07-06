@@ -58,9 +58,10 @@
   color: #ee4143;
 }
 
-.swiper-button-prev,
+.swiper-button-prev {
+  left: 0 !important;
+}
+
 .swiper-button-next {
-  @media screen and (width <= 1023px) {
-    display: none !important;
-  }
+  right: 0 !important;
 }

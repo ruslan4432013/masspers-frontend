@@ -1,0 +1,8 @@
+.stepper_container {
+  @apply flex justify-between relative;
+
+  &::before {
+    @apply content-[''] absolute h-full border-b-[1px] border-[#2CA6EB] z-0 bottom-[28px]
+    left-[30px] right-[30px];
+  }
+}

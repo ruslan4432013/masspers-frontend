@@ -2,20 +2,22 @@ import s from './colleague.module.scss'
 import Image, { StaticImageData } from 'next/image'
 
 type Props = {
-  photo: StaticImageData
-  name: string
-  post: string
-  education: {
-    institute: string
-    yearEnding: string
-    specialty: string
+  colleague: {
+    photo: StaticImageData
+    name: string
+    post: string
+    education: {
+      institute: string
+      yearEnding: string
+      specialty: string
+    }
+    slogan: string
+    responsibilities: string
+    pride: string
   }
-  slogan: string
-  responsibilities: string
-  pride: string
 }
 
-export const Colleague = (props: Props) => {
+export const Colleague = ({ colleague }: Props) => {
   const {
     photo,
     name,
@@ -24,7 +26,7 @@ export const Colleague = (props: Props) => {
     slogan,
     responsibilities,
     pride,
-  } = props
+  } = colleague
 
   return (
     <div className={s.colleague}>

@@ -127,16 +127,7 @@ export const Colleagues = () => {
           </div>
         </div>
         {colleagues.map((colleague) => (
-          <Colleague
-            key={colleague.name}
-            photo={colleague.photo}
-            name={colleague.name}
-            post={colleague.post}
-            education={colleague.education}
-            slogan={colleague.slogan}
-            responsibilities={colleague.responsibilities}
-            pride={colleague.pride}
-          />
+          <Colleague key={colleague.name} colleague={colleague} />
         ))}
       </div>
     </div>

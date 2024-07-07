@@ -5,6 +5,7 @@ import { Founders } from '@/widgets/founders'
 import { History } from '@/widgets/history'
 import { Achievements } from '@/widgets/achievements'
 import { ClientCases } from '@/widgets/client-cases'
+import { Colleagues } from '@/widgets/colleagues'
 
 const TeamPage = () => {
   return (
@@ -20,6 +21,9 @@ const TeamPage = () => {
         <Achievements />
       </div>
       <ClientCases />
+      <div className="mt-[60px] md:mt-[80px]">
+        <Colleagues />
+      </div>
       <div className="mt-[68px] md:mt-[80px] xl:mt-[145px]">
         <OurTeam />
       </div>

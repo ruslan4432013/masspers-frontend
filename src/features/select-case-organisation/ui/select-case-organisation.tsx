@@ -1,4 +1,5 @@
 'use client'
+
 import { Button, getActiveStatus } from '@/shared/ui/button'
 import { useState } from 'react'
 import s from './select-case-organisation.module.scss'

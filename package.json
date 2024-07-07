@@ -11,7 +11,6 @@
     "lint:prettier": "prettier . --write",
     "lint:stylelint": "stylelint --fix",
     "lint:types": "tsc -p tsconfig.json --noEmit",
-    "lint:full": "npm-run-all --parallel build",
     "lint:staged": "npx lint-staged",
     "pre-commit-check": "npm-run-all --parallel build lint:staged",
     "prepare": "husky"

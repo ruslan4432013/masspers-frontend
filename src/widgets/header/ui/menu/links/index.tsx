@@ -17,6 +17,9 @@ export const Links = ({ className }: Props) => {
         <Link href={'#'}>Наша команда</Link>
       </li>
       <li>
+        <Link href={'/tasks'}>Задачи</Link>
+      </li>
+      <li>
         <Link href={'#'}>Заявка</Link>
       </li>
       <li>

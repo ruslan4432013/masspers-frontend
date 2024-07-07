@@ -1,7 +1,7 @@
 import s from './colleagues.module.scss'
 import { Colleague } from '@/entities/colleague/ui/colleague'
 import golyakov from './golyakov.png'
-import сhepurnoy from './сhepurnoy.png'
+import chepurnoy from './сhepurnoy.png'
 import denisyuk from './denisyuk.png'
 import rakhmatov from './rakhmatov.png'
 import barilova from './barilova.png'
@@ -24,7 +24,7 @@ const colleagues = [
       'Профессиональная гордость: Разработка IT- технологии Masspers, Разработка технически- сложного мобильного приложения для Гостиницы «Мрия»',
   },
   {
-    photo: сhepurnoy,
+    photo: chepurnoy,
     name: 'Виктор Чепурной',
     post: 'Руководитель отдела Prodaction, в команде с 2018 года',
     education: {

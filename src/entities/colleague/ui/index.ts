@@ -1,0 +1,1 @@
+export { Colleague } from './colleague'

@@ -1,0 +1,29 @@
+.colleague {
+  @apply border border-primary-500 rounded-[10px] text-dark-500 px-[32px] py-[31px] flex flex-col
+  gap-[30px] xl:pl-[23px] xl:pr-[18px] 2xl:pl-[33px];
+
+  &__photo_name_post_wrapper {
+    @apply lg:grid lg:grid-cols-[178px,1fr];
+  }
+
+  &__photo_wrapper {
+    @apply w-[178px];
+  }
+
+  &__photo {
+    @apply object-cover rounded-[10px];
+  }
+
+  &__name_post_wrapper {
+    @apply mt-[30px] max-w-[217px] lg:pl-[30px];
+  }
+
+  &__name {
+    @apply block text-[26px] leading-[32px] font-medium text-start text-primary-500 uppercase
+    xl:leading-[34px];
+  }
+
+  &__post {
+    @apply mt-[4px] text-[14px] leading-[18px] font-medium text-start;
+  }
+}

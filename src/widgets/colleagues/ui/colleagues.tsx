@@ -1,11 +1,11 @@
 import s from './colleagues.module.scss'
 import { Colleague } from '@/entities/colleague/ui/colleague'
+import { ColleaguesOverview } from './colleagues-overview'
 import golyakov from './golyakov.png'
 import chepurnoy from './сhepurnoy.png'
 import denisyuk from './denisyuk.png'
 import rakhmatov from './rakhmatov.png'
 import barilova from './barilova.png'
-import cn from 'classnames'
 
 const colleagues = [
   {
@@ -89,43 +89,9 @@ const colleagues = [
 export const Colleagues = () => {
   return (
     <div className={s.colleagues}>
-      <div
-        className={cn(
-          s.colleagues__general_info,
-          s.colleagues__general_info_before_xl
-        )}
-      >
-        <h3 className={s.colleagues__point}>Мы</h3>
-        <h4 className={s.colleagues__title}>Наша команда</h4>
-        <div className={s.colleagues__text}>
-          <p className={s.colleagues__text_title}>
-            Наш коллектив - настоящая гордость нашей компании.
-          </p>
-          <p className={s.colleagues__text_info}>
-            Он состоит из высококвалифицированных профессионалов, которые тесно
-            сотрудничают и воплощают в жизнь самые сложные и амбициозные
-            проекты.
-          </p>
-        </div>
-      </div>
+      <ColleaguesOverview className={s.overview_before_xl} />
       <div className={s.colleagues__colleague_wrapper}>
-        <div
-          className={cn(
-            s.colleagues__general_info,
-            s.colleagues__general_info_after_xl
-          )}
-        >
-          <h3 className={s.colleagues__point}>Мы</h3>
-          <h4 className={s.colleagues__title}>Наша команда</h4>
-          <div className={s.colleagues__text}>
-            <p>Наш коллектив - настоящая гордость нашей компании.</p>
-            <p>
-              Он состоит из высококвалифицированных профессионалов, которые
-              тесно сотрудничают и воплощают в жизнь самые сложные и амбициозные
-              проекты.
-            </p>
-          </div>
-        </div>
+        <ColleaguesOverview className={s.overview_after_xl} />
         {colleagues.map((colleague) => (
           <Colleague key={colleague.name} colleague={colleague} />
         ))}

@@ -1,0 +1,72 @@
+.technology_step {
+  @apply border border-primary-500 rounded-[10px] px-[24px] py-[51px] flex flex-col gap-[37px];
+
+  &__info {
+    @apply flex flex-col gap-[25px];
+  }
+
+  &__sequence {
+    @apply flex items-center;
+  }
+
+  &__sequence_num {
+    @apply w-[68px] h-[68px] flex justify-center items-center rounded-full bg-primary-500 text-white
+    text-[40px] leading-[52px] font-medium;
+  }
+
+  &__sequence_title {
+    @apply text-[26px] leading-[34px] font-medium uppercase text-start text-primary-500 pl-[20px];
+  }
+
+  &__text {
+    @apply text-[16px] leading-[21px] font-normal text-start;
+  }
+
+  &__video_wrapper {
+    @apply overflow-hidden;
+  }
+
+  &__video {
+    @apply rounded-[10px];
+  }
+
+  &__image_description_wrapper {
+    @apply grid grid-cols-2 gap-[10px];
+  }
+
+  &__image_description {
+    @apply flex flex-col gap-[4px];
+  }
+
+  &__image_description_text {
+    @apply text-[16px] leading-[21px] font-normal text-start break-words;
+  }
+
+  &__form_container {
+    @apply flex flex-col gap-[10px];
+  }
+
+  &__form_brace {
+    @apply w-full;
+  }
+
+  &__form_wrapper {
+    @apply flex flex-col gap-[10px];
+  }
+
+  &__input::placeholder {
+    @apply text-[14px];
+  }
+
+  &__select {
+    @apply text-[14px];
+  }
+
+  &__select_option_hidden {
+    @apply hidden;
+  }
+
+  &__form_button {
+    @apply uppercase text-[16px] leading-[21px] font-medium;
+  }
+}

@@ -1,21 +1,22 @@
 .technology_explanation {
-  @apply px-[10px] text-dark-500 flex flex-col gap-[60px];
+  @apply px-[10px] text-dark-500 flex flex-col gap-[60px] md:px-[20px] md:gap-[80px] xl:container;
 
   &__general_info {
-    @apply flex flex-col gap-[30px];
+    @apply flex flex-col gap-[30px] xl:flex-row xl:gap-[80px];
   }
 
   &__title {
-    @apply text-[32px] leading-[41px] font-medium uppercase text-center text-primary-500;
+    @apply text-[32px] leading-[41px] font-medium uppercase text-center text-primary-500
+    md:text-start xl:text-[53px] xl:leading-[68px] xl:min-w-[400px];
 
     text-shadow: var(--text-shadow);
   }
 
   &__text {
-    @apply text-[16px] leading-[21px] font-normal text-center;
+    @apply text-[16px] leading-[21px] font-normal text-center md:text-start;
   }
 
   &__steps {
-    @apply flex flex-col gap-[20px];
+    @apply flex flex-col gap-[20px] md:grid md:grid-cols-2;
   }
 }

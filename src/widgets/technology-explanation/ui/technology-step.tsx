@@ -3,7 +3,9 @@ import Image, { StaticImageData } from 'next/image'
 import { Input } from '@/shared/ui/input'
 import { Select } from '@/shared/ui/select'
 import { Button } from '@/shared/ui/button'
+import cn from 'classnames'
 import brace from './brace.svg'
+import braceHorizontal from './braceHorizontal.svg'
 
 type Props = {
   variant?: 'primary' | 'secondary'
@@ -55,41 +57,58 @@ export const TechnologyStep = ({ variant, step }: Props) => {
       )}
 
       {variant === 'secondary' && (
-        <div className={s.technology_step__form_container}>
-          <Image
-            src={brace}
-            alt={'brace'}
-            className={s.technology_step__form_brace}
-          />
+        <div className={s.technology_step__form_outer_container}>
+          <div className={s.technology_step__form_container}>
+            <div className={s.technology_step__form_brace_wrapper}>
+              <Image
+                src={brace}
+                alt={'brace'}
+                className={cn(
+                  s.technology_step__form_brace,
+                  s.technology_step__form_brace_sm
+                )}
+              />
+              <Image
+                src={braceHorizontal}
+                alt={'brace'}
+                className={cn(
+                  s.technology_step__form_brace,
+                  s.technology_step__form_brace_xl
+                )}
+              />
+            </div>
 
-          <div className={s.technology_step__form_wrapper}>
-            <Input
-              className={s.technology_step__input}
-              placeholder={'Как к вам обращаться?'}
-            />
-            <Input
-              className={s.technology_step__input}
-              placeholder={'Наименование вашей компании'}
-            />
-            <Input
-              className={s.technology_step__input}
-              placeholder={'Ваш контактный телефон'}
-            />
-            <Select defaultValue={''} className={s.technology_step__select}>
-              <option
-                value=""
-                disabled
-                className={s.technology_step__select_option_hidden}
-              >
-                Отрасль вашего бизнеса
-              </option>
-              <option value="small">Малый бизнес</option>
-              <option value="big">Большой бизнес</option>
-            </Select>
+            <div className={s.technology_step__form_wrapper}>
+              <div className={s.technology_step__form_inputs}>
+                <Input
+                  className={s.technology_step__input}
+                  placeholder={'Как к вам обращаться?'}
+                />
+                <Input
+                  className={s.technology_step__input}
+                  placeholder={'Наименование вашей компании'}
+                />
+                <Input
+                  className={s.technology_step__input}
+                  placeholder={'Ваш контактный телефон'}
+                />
+                <Select defaultValue={''} className={s.technology_step__select}>
+                  <option
+                    value=""
+                    disabled
+                    className={s.technology_step__select_option_hidden}
+                  >
+                    Отрасль вашего бизнеса
+                  </option>
+                  <option value="small">Малый бизнес</option>
+                  <option value="big">Большой бизнес</option>
+                </Select>
+              </div>
+              <Button className={s.technology_step__form_button}>
+                Свяжитесь со мной
+              </Button>
+            </div>
           </div>
-          <Button className={s.technology_step__form_button}>
-            Свяжитесь со мной
-          </Button>
         </div>
       )}
     </div>

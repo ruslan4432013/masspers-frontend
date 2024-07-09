@@ -7,10 +7,10 @@ const ProductPage = () => {
   return (
     <section>
       <ProductPreview />
-      <ClientCases />
       <div className="mt-[60px] md:mt-[80px]">
         <TechnologyExplanation />
       </div>
+      <ClientCases />
       <div className="mt-[60px] md:mt-[80px]">
         <ApplicationForm variant="secondary" />
       </div>

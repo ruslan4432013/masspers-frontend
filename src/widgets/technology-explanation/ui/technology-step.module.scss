@@ -1,8 +1,13 @@
 .technology_step {
-  @apply border border-primary-500 rounded-[10px] px-[24px] py-[51px] flex flex-col gap-[37px];
+  @apply border border-primary-500 rounded-[10px] px-[24px] py-[51px] flex flex-col gap-[37px]
+  md:justify-between lg:px-[44px];
 
   &__info {
     @apply flex flex-col gap-[25px];
+  }
+
+  &__info:last-child {
+    @apply lg:gap-[17px];
   }
 
   &__sequence {
@@ -31,7 +36,7 @@
   }
 
   &__image_description_wrapper {
-    @apply grid grid-cols-2 gap-[10px];
+    @apply grid grid-cols-2 gap-[10px] lg:mt-[26px];
   }
 
   &__image_description {
@@ -42,24 +47,44 @@
     @apply text-[16px] leading-[21px] font-normal text-start break-words;
   }
 
+  &__form_outer_container {
+    @apply w-full md:flex md:items-center lg:items-end xl:items-center;
+  }
+
   &__form_container {
-    @apply flex flex-col gap-[10px];
+    @apply flex flex-col gap-[10px] justify-end md:w-full lg:flex-row lg:gap-[35px];
+  }
+
+  &__form_brace_wrapper {
+    @apply md:hidden lg:relative lg:grow-0 lg:flex lg:justify-center lg:items-center;
   }
 
   &__form_brace {
-    @apply w-full;
+    @apply w-full lg:h-full;
+  }
+
+  &__form_brace_sm {
+    @apply lg:hidden;
+  }
+
+  &__form_brace_xl {
+    @apply hidden lg:block;
   }
 
   &__form_wrapper {
+    @apply flex flex-col lg:grow;
+  }
+
+  &__form_inputs {
     @apply flex flex-col gap-[10px];
   }
 
   &__input::placeholder {
-    @apply text-[14px];
+    @apply text-[14px] xl:text-[16px];
   }
 
   &__select {
-    @apply text-[14px];
+    @apply text-[14px] xl:text-[16px];
   }
 
   &__select_option_hidden {
@@ -67,6 +92,14 @@
   }
 
   &__form_button {
-    @apply uppercase text-[16px] leading-[21px] font-medium;
+    @apply uppercase text-[16px] leading-[21px] font-medium mt-[10px] w-full;
+
+    box-shadow: 0 7px 14.2px 0 #0006;
   }
+}
+
+.technology_step:last-child {
+  @apply md:grid md:grid-cols-40_58 lg:gap-[49px];
+
+  grid-column: span 2;
 }

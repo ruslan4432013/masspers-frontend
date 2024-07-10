@@ -1,18 +1,13 @@
 'use client'
 import s from './client-cases.module.scss'
-import previewImage from './video-preview.png'
-import Image from 'next/image'
 import { Button } from '@/shared/ui/button'
 import { range } from '@/shared/lib/utils/range'
 import { useState } from 'react'
-import cn from 'classnames'
+import { CaseItem } from '@/entities/case/ui/case-item'
 
 export const ClientCases = () => {
   const [activeElement, setActiveElement] = useState(0)
-
-  const handleClickIcon = (el: number) => () => {
-    setActiveElement(el)
-  }
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
 
   return (
     <div className={s.client_cases}>
@@ -21,20 +16,14 @@ export const ClientCases = () => {
         <div className={s.client_cases__preview_wrapper}>
           <div className={s.client_cases__previews}>
             {range(0, 15).map((el) => (
-              <button
+              <CaseItem
+                anchorEl={anchorEl}
+                setAnchorEl={setAnchorEl}
                 key={el}
-                onClick={handleClickIcon(el)}
-                className={cn(s.client_cases__preview_button, {
-                  [s.client_cases__preview_button___active]:
-                    activeElement === el,
-                })}
-              >
-                <Image
-                  src={previewImage}
-                  className={s.client_cases__preview}
-                  alt={'Preview Image'}
-                />
-              </button>
+                value={el}
+                isActive={activeElement === el}
+                onClickIcon={setActiveElement}
+              />
             ))}
           </div>
         </div>

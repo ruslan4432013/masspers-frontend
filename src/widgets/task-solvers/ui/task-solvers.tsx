@@ -17,9 +17,6 @@ export const TaskSolvers = async () => {
   return (
     <div className="flex flex-col items-center justify-center w-full px-[10px] md:items-start md:px-[20px] xl:container">
       <div className="md:flex md:gap-[50px] md:justify-start xl:justify-end gap-[89px]">
-        <h4 className="uppercase text-4xl text-primary-500 text-center md:text-start xl:text-[53px] xl:leading-[130%] xl:min-w-[572px] font-normal">
-          Какие задачи вы решите с MassPers?
-        </h4>
         <Suspense>
           <SelectButtons departments={departments} />
         </Suspense>

@@ -1,0 +1,16 @@
+.conversion_option {
+  @apply flex flex-col items-center gap-[20px];
+
+  &__img {
+    @apply w-full h-auto rounded-[10px];
+  }
+
+  &__button {
+    @apply uppercase text-[#2CA6EB] border-[#2CA6EB]  hover:border-[#64BDED]
+    hover:text-[#64BDED];
+  }
+
+  &__text {
+    @apply text-[16px] leading-[21px] font-normal text-center px-[13px];
+  }
+}

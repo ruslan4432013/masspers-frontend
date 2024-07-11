@@ -82,7 +82,7 @@ export const Conversion = () => {
 
         <div className={s.conversion__total_info}>
           <h5 className={s.conversion__total_info_title}>Итого</h5>
-          <div className={s.conversion__total_info_text}>
+          <div className={s.conversion__total_info_description}>
             <p>
               Целевая конверсия +15%
               <span className={s.conversion__total_info_note}>

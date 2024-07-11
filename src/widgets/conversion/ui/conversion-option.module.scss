@@ -1,16 +1,16 @@
 .conversion_option {
-  @apply flex flex-col items-center gap-[20px];
+  @apply flex flex-col items-center gap-[20px] md:items-start;
 
   &__img {
     @apply w-full h-auto rounded-[10px];
   }
 
   &__button {
-    @apply uppercase text-[#2CA6EB] border-[#2CA6EB]  hover:border-[#64BDED]
-    hover:text-[#64BDED];
+    @apply text-[16px] leading-[21px] font-medium uppercase text-[#2CA6EB] border-[#2CA6EB]
+    hover:border-[#64BDED] hover:text-[#64BDED] md:text-[12px] lg:text-[16px];
   }
 
   &__text {
-    @apply text-[16px] leading-[21px] font-normal text-center px-[13px];
+    @apply text-[16px] leading-[21px] font-normal text-center px-[13px] md:text-start md:px-0;
   }
 }

@@ -7,10 +7,10 @@
   }
 }
 
-.colleagues .overview_before_xl {
+.colleagues .overview_mobile {
   @apply xl:hidden;
 }
 
-.colleagues .overview_after_xl {
+.colleagues .overview_desktop {
   @apply hidden xl:flex;
 }

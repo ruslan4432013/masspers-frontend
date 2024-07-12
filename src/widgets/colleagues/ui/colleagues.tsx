@@ -89,9 +89,9 @@ const colleagues = [
 export const Colleagues = () => {
   return (
     <div className={s.colleagues}>
-      <ColleaguesOverview className={s.overview_before_xl} />
+      <ColleaguesOverview className={s.overview_mobile} />
       <div className={s.colleagues__colleague_wrapper}>
-        <ColleaguesOverview className={s.overview_after_xl} />
+        <ColleaguesOverview className={s.overview_desktop} />
         {colleagues.map((colleague) => (
           <Colleague key={colleague.name} colleague={colleague} />
         ))}

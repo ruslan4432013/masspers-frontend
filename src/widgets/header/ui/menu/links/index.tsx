@@ -8,7 +8,7 @@ export const Links = ({ className }: Props) => {
   return (
     <ul className={className}>
       <li>
-        <Link href={'/'}>Продукт</Link>
+        <Link href={'/product'}>Продукт</Link>
       </li>
       <li>
         <Link href={'/cases'}>Кейсы</Link>

@@ -26,7 +26,7 @@ export const Links = ({ className }: Props) => {
         <Link href={'#'}>Блог</Link>
       </li>
       <li>
-        <Link href={'#'}>Контакты</Link>
+        <Link href={'/contacts'}>Контакты</Link>
       </li>
     </ul>
   )

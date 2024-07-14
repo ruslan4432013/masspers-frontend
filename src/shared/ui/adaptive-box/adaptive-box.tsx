@@ -1,63 +1,26 @@
-import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react'
-import { Property } from 'csstype'
+'use client'
+import { ReactNode, useEffect, useState } from 'react'
+import { useMediaQuery } from 'usehooks-ts'
 
-type AdaptiveComponents = {
-  byDefault: ReactNode
+type Props = {
+  initial: ReactNode
   /**
    * 768px
    */
   md?: ReactNode
-  /**
-   * 1024px
-   */
-  lg?: ReactNode
-  /**
-   * 1280px
-   */
-  xl?: ReactNode
 }
 
-type Props = {
-  component: AdaptiveComponents
-  props?: DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>
-  display?: Property.Display
+const MatchMedia = ({ initial, md }: Props) => {
+  const isDesktop = useMediaQuery('(min-width: 768px)')
+  const desktopComponent = md ?? initial
+  return <>{isDesktop ? desktopComponent : initial}</>
 }
 
 export const AdaptiveBox = (props: Props) => {
-  const { component, props: boxProps, display } = props
-  const { md, xl, lg, byDefault } = component ?? {}
-  const { className, ...other } = boxProps ?? {}
-
-  return (
-    <>
-      <div
-        data-display={display}
-        className={`${className} md:hidden`}
-        {...other}
-      >
-        {byDefault}
-      </div>
-      <div
-        data-display={display}
-        className={`hidden md:block lg:hidden ${className}`}
-        {...other}
-      >
-        {md ?? byDefault}
-      </div>
-      <div
-        data-display={display}
-        className={`hidden lg:block xl:hidden ${className}`}
-        {...other}
-      >
-        {lg ?? md ?? byDefault}
-      </div>
-      <div
-        data-display={display}
-        className={`hidden xl:block ${className}`}
-        {...other}
-      >
-        {xl ?? lg ?? md ?? byDefault}
-      </div>
-    </>
-  )
+  const { initial, md } = props
+  const [isMounted, setIsMounted] = useState(false)
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+  return <>{isMounted ? <MatchMedia initial={initial} md={md} /> : null}</>
 }

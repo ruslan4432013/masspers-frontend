@@ -1,0 +1,14 @@
+.advantages {
+  @apply flex flex-col;
+
+  &__title {
+    @apply text-[32px] leading-[41px] font-medium uppercase text-center text-primary-500 px-[17px]
+    mb-[30px];
+
+    text-shadow: var(--text-shadow);
+  }
+
+  &__wrapper {
+    @apply flex flex-col gap-[6px];
+  }
+}

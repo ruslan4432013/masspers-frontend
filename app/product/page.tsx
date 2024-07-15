@@ -3,6 +3,8 @@ import { ClientCases } from '@/widgets/client-cases'
 import { ProductPreview } from '@/widgets/product-preview'
 import { TechnologyExplanation } from '@/widgets/technology-explanation'
 import { Conversion } from '@/widgets/conversion'
+import { TaskSolvers } from '@/widgets/task-solvers'
+import { Advantages } from '@/widgets/advantages'
 
 const ProductPage = () => {
   return (
@@ -13,6 +15,12 @@ const ProductPage = () => {
       </div>
       <div className="mt-[60px] md:mt-[80px]">
         <Conversion />
+      </div>
+      <div className="mt-[60px] md:mt-[80px]">
+        <TaskSolvers />
+      </div>
+      <div className="mt-[60px] md:mt-[80px]">
+        <Advantages />
       </div>
       <ClientCases />
       <div className="mt-[60px] md:mt-[80px]">

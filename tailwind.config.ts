@@ -13,6 +13,8 @@ const config: Config = {
       },
       colors: {
         dark: {
+          100: '#F3F3F3',
+          200: '#E8E8E8',
           300: '#cfcfcf',
           500: '#35393a',
         },

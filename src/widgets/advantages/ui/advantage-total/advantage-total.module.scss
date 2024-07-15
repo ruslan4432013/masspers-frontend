@@ -1,0 +1,16 @@
+.advantage_total {
+  @apply mx-[10px] text-dark-500 text-[16px] leading-[21px] border border-primary-500
+  rounded-[10px] py-[36px] pl-[30px] pr-[57px] mt-[20px] mb-[30px] flex flex-col gap-[9px];
+
+  &__signs {
+    @apply flex gap-[17px];
+  }
+
+  &__sign {
+    @apply flex gap-[4px] items-center;
+  }
+
+  &__text {
+    @apply text-[16px] leading-[21px] font-normal;
+  }
+}

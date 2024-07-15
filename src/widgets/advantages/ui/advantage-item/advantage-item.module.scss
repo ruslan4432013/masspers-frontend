@@ -1,0 +1,19 @@
+.advantage_item {
+  @apply relative;
+
+  &:nth-child(even) {
+    @apply bg-dark-100;
+  }
+
+  &:nth-child(odd) {
+    @apply bg-dark-200;
+  }
+
+  &__sign {
+    @apply absolute top-[24px] left-[30px];
+  }
+
+  &__description {
+    @apply text-[16px] leading-[21px] font-normal pl-[67px] pr-[19px] py-[24px];
+  }
+}

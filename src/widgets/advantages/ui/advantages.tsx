@@ -1,6 +1,7 @@
 import s from './advantages.module.scss'
-import { AdvantageMobile } from './advantage-mobile'
 import { AdvantageType } from './advantages.type'
+import { AdvantageMobile } from './advantage-mobile'
+import { AdvantageDesktop } from './advantage-desktop'
 
 const advantages: AdvantageType[] = [
   {
@@ -52,7 +53,7 @@ const advantages: AdvantageType[] = [
       {
         sign: 'minus',
         description:
-          'Если адресат занят во время поступления звонка, то он его сбросит. Цель звонка не достигнута.Повторный звонок может быть воспринят, как навязчивый',
+          'Если адресат занят во время поступления звонка, то он его сбросит. Цель звонка не достигнута. Повторный звонок может быть воспринят, как навязчивый',
       },
       {
         sign: 'minus',
@@ -121,9 +122,15 @@ export const Advantages = () => {
     <div className={s.advantages}>
       <h3 className={s.advantages__title}>Преимущества работы с MassPers</h3>
 
-      <div className={s.advantages__wrapper}>
+      <div className={s.advantages__mobile_wrapper}>
         {advantages.map((advantage) => (
           <AdvantageMobile key={advantage.title} advantage={advantage} />
+        ))}
+      </div>
+
+      <div className={s.advantages__desktop_wrapper}>
+        {advantages.map((advantage) => (
+          <AdvantageDesktop key={advantage.title} advantage={advantage} />
         ))}
       </div>
     </div>

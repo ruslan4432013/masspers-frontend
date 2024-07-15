@@ -1,6 +1,7 @@
 .advantage_total {
   @apply mx-[10px] text-dark-500 text-[16px] leading-[21px] border border-primary-500
-  rounded-[10px] py-[36px] pl-[30px] pr-[57px] mt-[20px] mb-[30px] flex flex-col gap-[9px];
+  rounded-[10px] py-[36px] pl-[30px] pr-[57px] mt-[20px] mb-[30px] flex flex-col gap-[9px]
+  md:mt-[31px] md:mb-0 md:pr-[24px] md:mx-0 md:h-[150px] md:py-[20px] lg:py-[36px] xl:mt-[39];
 
   &__signs {
     @apply flex gap-[17px];
@@ -11,6 +12,6 @@
   }
 
   &__text {
-    @apply text-[16px] leading-[21px] font-normal;
+    @apply text-[16px] leading-[21px] font-normal break-words;
   }
 }

@@ -1,14 +1,18 @@
 .advantages {
-  @apply flex flex-col;
+  @apply flex flex-col md:px-[20px] xl:container;
 
   &__title {
     @apply text-[32px] leading-[41px] font-medium uppercase text-center text-primary-500 px-[17px]
-    mb-[30px];
+    mb-[30px] md:mb-[40px] md:text-start md:px-0 xl:text-[53px] xl:leading-[68px];
 
     text-shadow: var(--text-shadow);
   }
 
-  &__wrapper {
-    @apply flex flex-col gap-[6px];
+  &__mobile_wrapper {
+    @apply flex flex-col gap-[6px] md:hidden;
+  }
+
+  &__desktop_wrapper {
+    @apply hidden md:grid md:grid-cols-3 md:gap-[10px] lg:gap-[20px];
   }
 }

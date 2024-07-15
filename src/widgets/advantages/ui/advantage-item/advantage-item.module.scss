@@ -1,5 +1,5 @@
 .advantage_item {
-  @apply relative;
+  @apply relative md:h-[330px] lg:h-[260px] xl:h-[200px] 2xl:h-[170px];
 
   &:nth-child(even) {
     @apply bg-dark-100;
@@ -9,11 +9,16 @@
     @apply bg-dark-200;
   }
 
+  &:last-child {
+    @apply md:rounded-b-[10px];
+  }
+
   &__sign {
-    @apply absolute top-[24px] left-[30px];
+    @apply absolute top-[24px] left-[30px] md:left-[20px] lg:left-[30px];
   }
 
   &__description {
-    @apply text-[16px] leading-[21px] font-normal pl-[67px] pr-[19px] py-[24px];
+    @apply text-[16px] leading-[21px] font-normal pl-[67px] pr-[19px] py-[24px] md:pl-[57px]
+    md:break-words lg:pl-[67px] lg:pr-[39px] lg:break-normal;
   }
 }

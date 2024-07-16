@@ -6,7 +6,7 @@ import { Links } from '../links'
 export const MenuDesktop = () => {
   return (
     <nav className={s.menu_desktop}>
-      <Link href="#">
+      <Link href="/">
         <Logo />
       </Link>
       <Links className={s.main_nav} />

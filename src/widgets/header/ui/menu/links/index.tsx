@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { URLS } from '@/shared/config/urls'
 
 type Props = {
   className?: string
@@ -8,16 +9,16 @@ export const Links = ({ className }: Props) => {
   return (
     <ul className={className}>
       <li>
-        <Link href={'/'}>Продукт</Link>
+        <Link href={URLS.PRODUCT}>Продукт</Link>
       </li>
       <li>
-        <Link href={'/cases'}>Кейсы</Link>
+        <Link href={URLS.CASES}>Кейсы</Link>
       </li>
       <li>
-        <Link href={'/team'}>Наша команда</Link>
+        <Link href={URLS.TEAM}>Наша команда</Link>
       </li>
       <li>
-        <Link href={'/tasks'}>Задачи</Link>
+        <Link href={URLS.TASKS}>Задачи</Link>
       </li>
       <li>
         <Link href={'#'}>Заявка</Link>
@@ -26,7 +27,7 @@ export const Links = ({ className }: Props) => {
         <Link href={'#'}>Блог</Link>
       </li>
       <li>
-        <Link href={'#'}>Контакты</Link>
+        <Link href={URLS.CONTACTS}>Контакты</Link>
       </li>
     </ul>
   )

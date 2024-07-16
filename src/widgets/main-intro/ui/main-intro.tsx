@@ -2,9 +2,10 @@ import Image from 'next/image'
 import masspersLogo from './masspers-logo.png'
 import playerImg from './player.png'
 import s from './main-intro.module.scss'
-import { Button } from '@/shared/ui/button'
+import { ButtonLink } from '@/shared/ui/button'
 import { DescribeButtons } from './describe-buttons'
 import { TypewriterText } from './typewriter-text'
+import { URLS } from '@/shared/config/urls'
 
 export const MainIntro = () => {
   return (
@@ -22,7 +23,9 @@ export const MainIntro = () => {
             Быстрая генерация видео-сообщений, которые умеют общаться с
             адресатом
           </p>
-          <Button className={s.button}>Как это работает</Button>
+          <ButtonLink href={URLS.PRODUCT} className={s.button}>
+            Как это работает
+          </ButtonLink>
         </div>
         <div className={s.interactive}>
           <div className={s.image_wrapper}>

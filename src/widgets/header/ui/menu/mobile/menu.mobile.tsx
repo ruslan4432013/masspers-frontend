@@ -13,7 +13,7 @@ export const MenuMobile = () => {
 
   return (
     <nav className={cn(s.menu_mobile)}>
-      <Link href={'#'}>
+      <Link href={'/'}>
         <Logo />
       </Link>
       <div

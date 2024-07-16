@@ -1,0 +1,37 @@
+.full_contacts {
+  @apply px-[10px] md:px-[20px] xl:container;
+
+  &__title {
+    @apply text-primary-500 text-3xl xl:text-5xl;
+
+    text-shadow: var(--text-shadow);
+  }
+
+  &__info {
+    @apply flex flex-col text-2xl text-center md:flex-row md:mt-[30px] md:text-start md:justify-between xl:gap-[155px] xl:justify-start;
+  }
+
+  &__meta {
+    @apply mt-[30px] md:mt-0 md:max-w-[370px];
+  }
+
+  &__mail_phone {
+    @apply mt-[45px] text-primary-500;
+  }
+
+  &__icons {
+    @apply flex gap-[7px] mt-[28px] w-full justify-center md:justify-start;
+  }
+
+  &__requizits {
+    @apply mt-[75px] md:mt-0;
+  }
+
+  &__requizit_info {
+    @apply text-base text-center mt-[8px] md:text-start;
+  }
+
+  &__requizit {
+    @apply text-2xl leading-[200%];
+  }
+}

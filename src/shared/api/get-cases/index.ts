@@ -1,2 +1,2 @@
 export { getCases } from './get-cases'
-export type { GetCasesDTO } from './get-cases.dto'
+export type { GetCasesDTO, CaseDTO } from './get-cases.dto'

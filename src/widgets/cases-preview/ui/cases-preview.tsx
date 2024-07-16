@@ -1,7 +1,8 @@
 import s from './cases-preview.module.scss'
-import { Button } from '@/shared/ui/button'
+import { ButtonLink } from '@/shared/ui/button'
 import playersImg from './masspers-players.png'
 import Image from 'next/image'
+import { URLS } from '@/shared/config/urls'
 
 export const CasesPreview = () => {
   return (
@@ -13,7 +14,9 @@ export const CasesPreview = () => {
             Здесь вы можете ознакомиться с проектами, которые мы реализовали для
             своих клиентов из разных отраслей
           </p>
-          <Button className={s.cases_preview__button}>Как это работает</Button>
+          <ButtonLink href={URLS.PRODUCT} className={s.cases_preview__button}>
+            Как это работает
+          </ButtonLink>
         </div>
         <div className={s.cases_preview__image_wrapper}>
           <Image

@@ -1,41 +1,30 @@
-import Image from 'next/image'
+'use client'
 import s from './worth.module.scss'
+import { useCustomSearchParams } from '@/shared/lib/hooks/use-custom-search-params'
+import { DEPARTMENT_KEY, SOLVE_KEY } from '@/entities/tasks'
+import { GetTasksDTO } from '@/shared/api/get-tasks'
+import { getStaticUrl } from '@/shared/lib/get-static-url'
 
-import dialog from '@/widgets/worth/ui/temp-img/dialog.png'
-import crown from '@/widgets/worth/ui/temp-img/crown.png'
-import paper from '@/widgets/worth/ui/temp-img/paper.png'
-import handshake from '@/widgets/worth/ui/temp-img/handshake.png'
-import documents from '@/widgets/worth/ui/temp-img/documents.png'
-import clock from '@/widgets/worth/ui/temp-img/clock.png'
+type Props = {
+  tasksDTO: GetTasksDTO
+}
 
-const worth = [
-  {
-    image: dialog,
-    text: 'Моментальная связь с каждым клиентом',
-  },
-  {
-    image: crown,
-    text: 'Повышение уровня клиентского сервиса',
-  },
-  {
-    image: paper,
-    text: 'Увеличение среднего чека',
-  },
-  {
-    image: handshake,
-    text: 'Доверительное отношение с абсолютно каждым клиентом (никто не потерян, никто не забыт)',
-  },
-  {
-    image: documents,
-    text: 'Простой, быстрый способ сбора прямой обратной связи о работе компании от клиентов',
-  },
-  {
-    image: clock,
-    text: 'Ускоренный рост положительной репутации на рынке',
-  },
-]
+export const Worth = ({ tasksDTO }: Props) => {
+  const queryParams = useCustomSearchParams()
+  const solveValue = queryParams.get(SOLVE_KEY)
+  const departmentValue = queryParams.get(DEPARTMENT_KEY)
 
-export const Worth = () => {
+  if (!solveValue || !departmentValue) {
+    return null
+  }
+  const values = tasksDTO.Who?.[departmentValue]?.[solveValue]?.Values
+
+  if (!values) {
+    return null
+  }
+
+  const valuesDTO = Object.values(values)
+
   return (
     <div className={s.worth}>
       <div className={s.worth__point_title}>
@@ -46,18 +35,18 @@ export const Worth = () => {
       </div>
 
       <div className={s.worth__inner__container}>
-        {worth.map((value, idx) => (
+        {valuesDTO.map((value, idx) => (
           <div key={idx} className={s.worth__item__container}>
             <div className={s.img__container}>
-              <Image
-                src={value.image}
-                alt={value.text.slice(0, 20)}
+              <img
+                src={getStaticUrl(value.icon)}
+                alt={value.descript.slice(0, 20)}
                 width={100}
                 height={100}
                 className={s.img}
               />
             </div>
-            <p className={s.text}>{value.text}</p>
+            <p className={s.text}>{value.descript}</p>
           </div>
         ))}
       </div>

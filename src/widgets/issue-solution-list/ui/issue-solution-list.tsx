@@ -1,34 +1,31 @@
+'use client'
 import { IssueSolution } from '@/entities/issue-solution'
 import s from './issue-solution-list.module.scss'
+import { useCustomSearchParams } from '@/shared/lib/hooks/use-custom-search-params'
+import { DEPARTMENT_KEY, SOLVE_KEY } from '@/entities/tasks'
+import { GetTasksDTO } from '@/shared/api/get-tasks'
 
-const list = [
-  {
-    issue:
-      'Текстовая рассылка не читается или воспринимается клиентами, как робототизированная, а значит не серьезная',
-    solution:
-      'Само по себе видеосообщение от ТОП-менеджмента компании - продавца является новым и интересным для клиента маркетинговым инструментом. А видео-сообщение обращенное лично к адресату производит эффект наивысшей формы клиентского сервиса, а значит повышает лояльность к бренду',
-  },
-  {
-    issue:
-      'Оповещать или поздравлять клиентов лично звонком очень трудозатратно',
-    solution:
-      'Персональные видео генерируются программным обеспечением MassPers автоматически при помощи CRM и заготовленных шаблонов в течение 2-х минут. За день можно отправить более 1000 сообщений',
-  },
-  {
-    issue:
-      'Продавцы по разным причинам не предлагают клиентам сопутствующие продукты',
-    solution:
-      'Настройка автоматической отправки персонального видео-сообщения новому клиенту исключит риск бездействия продавца и позволит провести продающую презентацию дополнительных продуктов',
-  },
-  {
-    issue:
-      'Продавцы забывают или не испытывают должного интереса к старым клиентам, потому редко связываются с ними',
-    solution:
-      'Персональное видео-обращение от ТОП-менеджмента компании с предоставлением личной прораммы лояльности убедит клиента стать максимально приверженным к бренду.',
-  },
-]
+type Props = {
+  tasksDTO: GetTasksDTO
+}
 
-export const IssueSolutionList = () => {
+export const IssueSolutionList = ({ tasksDTO }: Props) => {
+  const queryParams = useCustomSearchParams()
+  const solveValue = queryParams.get(SOLVE_KEY)
+  const departmentValue = queryParams.get(DEPARTMENT_KEY)
+
+  if (!solveValue || !departmentValue) {
+    return null
+  }
+
+  const pains = tasksDTO.Who?.[departmentValue]?.[solveValue]?.Pains
+
+  if (!pains) {
+    return null
+  }
+
+  const painsDTO = Object.values(pains)
+
   return (
     <div className={s.issue_solution_list}>
       <div className={s.issue_solution_list__wrapper}>
@@ -46,8 +43,8 @@ export const IssueSolutionList = () => {
               Решение
             </span>
           </div>
-          {list.map(({ issue, solution }, index) => (
-            <IssueSolution key={index} issue={issue} solution={solution} />
+          {painsDTO.map(({ Pain, Decision }, index) => (
+            <IssueSolution key={index} issue={Pain} solution={Decision} />
           ))}
         </div>
       </div>

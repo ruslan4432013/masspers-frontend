@@ -5,7 +5,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import open from '../open.svg'
 import close from '../close.svg'
-import { AdvantageType } from '../advantages.type'
+import { AdvantageType } from '../advantage.type'
 import { AdvantageItem } from '../advantage-item'
 import { AdvantageTotal } from '../advantage-total'
 

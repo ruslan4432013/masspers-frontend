@@ -1,4 +1,4 @@
-import { AdvantageType } from '../advantages.type'
+import { AdvantageType } from '../advantage.type'
 import s from './advantage-desktop.module.scss'
 import { AdvantageItem } from '../advantage-item'
 import { AdvantageTotal } from '../advantage-total'

@@ -1,0 +1,14 @@
+.decisions {
+  @apply px-[10px] md:px-[20px] xl:container;
+
+  &__title {
+    @apply text-[32px] leading-[41px] font-medium uppercase text-center text-primary-500 mb-[24px]
+    md:text-start md:mb-[40px] xl:mb-[73px] xl:text-[53px] xl:leading-[68px];
+
+    text-shadow: var(--text-shadow);
+  }
+
+  &__wrapper {
+    @apply grid grid-rows-4 gap-[21px] md:gap-[10px] md:grid-cols-4 md:grid-rows-1 lg:gap-[21px];
+  }
+}

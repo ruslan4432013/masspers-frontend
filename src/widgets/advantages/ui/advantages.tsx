@@ -1,5 +1,5 @@
 import s from './advantages.module.scss'
-import { AdvantageType } from './advantages.type'
+import { AdvantageType } from './advantage.type'
 import { AdvantageMobile } from './advantage-mobile'
 import { AdvantageDesktop } from './advantage-desktop'
 

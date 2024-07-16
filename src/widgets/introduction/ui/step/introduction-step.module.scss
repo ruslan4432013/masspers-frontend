@@ -1,0 +1,19 @@
+.introduction_step {
+  @apply relative flex flex-col rounded-[10px] border border-primary-500 pt-[145px] px-[25px]
+  pb-[48px] text-dark-500 md:pt-[90px] lg:pt-[50px] lg:pl-[128px];
+
+  &__number {
+    @apply absolute top-[50px] left-1/2 transform -translate-x-1/2 h-[68px] w-[68px] rounded-full
+    bg-primary-500 flex justify-center items-center text-white text-[40px] leading-[52px]
+    font-medium md:top-[10px] md:left-[10px] md:transform-none lg:top-[51px] lg:left-[34px];
+  }
+
+  &__title {
+    @apply text-[22px] leading-[34px] font-medium text-center mb-[20px] md:text-start xl:text-[29px]
+    xl:leading-[44px];
+  }
+
+  &__text {
+    @apply text-[16px] leading-[21px] font-normal text-center break-words md:text-start;
+  }
+}

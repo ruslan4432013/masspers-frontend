@@ -15,7 +15,7 @@ type Props = {
 
 export const AdvantageMobile = ({ advantage }: Props) => {
   const { title, text, prosAndCons, totalInfo } = advantage
-  const [listOpen, setListOpen] = useState(true)
+  const [listOpen, setListOpen] = useState(false)
 
   const toggleListOpen = () => {
     setListOpen((prev) => !prev)

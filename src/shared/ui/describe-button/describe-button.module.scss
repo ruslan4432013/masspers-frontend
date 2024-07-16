@@ -51,7 +51,7 @@
 }
 
 .describe_button__link {
-  @apply text-primary-500 flex items-center justify-start gap-[6px] mt-2;
+  @apply text-primary-500 flex items-center justify-start gap-[6px] mt-2 relative z-50;
 }
 
 .describe_button__link___decoration {

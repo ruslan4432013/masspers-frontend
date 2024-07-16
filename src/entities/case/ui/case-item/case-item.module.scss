@@ -1,11 +1,11 @@
 .case_item {
-  @apply bg-none border-2 border-transparent rounded-[5px];
+  @apply bg-none border-2 border-transparent rounded-[5px] h-[124px] max-h-[124px];
 
   &__active {
     @apply border-primary-500 border-solid;
   }
 
   &__preveiew {
-    @apply w-full h-full;
+    @apply w-full h-full object-scale-down object-center;
   }
 }

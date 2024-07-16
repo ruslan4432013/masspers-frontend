@@ -2,7 +2,7 @@ export type GetCasesDTO = Record<string, GroupCaseDTO>
 
 type GroupCaseDTO = Record<string, CaseDTO>
 
-type CaseDTO = {
+export type CaseDTO = {
   Descript: string
   Period: string
   Video: string

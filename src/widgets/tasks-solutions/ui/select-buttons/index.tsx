@@ -29,7 +29,7 @@ export const SelectButtons = (props: Props) => {
 
   useEffect(() => {
     if (!queryValue && departments[0]) {
-      handleChange(departments[0])
+      handleChange(departments[0])()
     }
   }, [])
 

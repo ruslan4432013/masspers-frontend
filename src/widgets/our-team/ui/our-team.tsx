@@ -1,9 +1,9 @@
 import s from './our-team.module.scss'
 import foundersImg from './founders.png'
 import clientImg from './client-image.png'
-import { Button } from '@/shared/ui/button'
+import { ButtonLink } from '@/shared/ui/button'
 import Image from 'next/image'
-import Link from 'next/link'
+import { URLS } from '@/shared/config/urls'
 
 export const OurTeam = () => {
   return (
@@ -14,9 +14,9 @@ export const OurTeam = () => {
           Разрабатываем эффективные инновационные технологии рыночных
           коммуникаций для укрепления позиций бизнеса
         </p>
-        <Link href={'/'} className={s.our_team__link_button}>
-          <Button className={s.our_team__button}>Подробнее о команде</Button>
-        </Link>
+        <ButtonLink href={URLS.TEAM} className={s.our_team__button}>
+          Подробнее о команде
+        </ButtonLink>
       </div>
       <div className={s.our_team__images}>
         <Image

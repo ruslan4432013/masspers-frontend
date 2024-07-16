@@ -1,21 +1,22 @@
 'use client'
 import cn from 'classnames'
 import s from './case-item.module.scss'
-import Image from 'next/image'
-import previewImage from './video-preview.png'
 import { Dispatch, MouseEvent, SetStateAction, useId } from 'react'
 import { Popper } from '@mui/base'
+import { getStaticUrl } from '@/shared/lib/get-static-url'
+import { CaseDTO } from '@/shared/api/get-cases'
 
 type Props = {
   isActive: boolean
-  value: number
-  onClickIcon: (el: number) => void
+  value: CaseDTO
+  image: string
+  onClickIcon: (el: CaseDTO) => void
   anchorEl: HTMLElement | null
   setAnchorEl: Dispatch<SetStateAction<HTMLElement | null>>
 }
 
 export const CaseItem = (props: Props) => {
-  const { value, onClickIcon, isActive, setAnchorEl, anchorEl } = props
+  const { value, onClickIcon, isActive, setAnchorEl, anchorEl, image } = props
 
   const id = useId()
 
@@ -32,12 +33,12 @@ export const CaseItem = (props: Props) => {
         [s.case_item__active]: isActive,
       })}
     >
-      <Image
-        src={previewImage}
+      <img
+        src={getStaticUrl(`https://test-mass.ru/admin/${image}`)}
         className={s.case_item__preveiew}
         alt={'Preview Image'}
       />
-      <Popper id={id} open={isOpen} anchorEl={anchorEl}>
+      <Popper disablePortal id={id} open={isOpen} anchorEl={anchorEl}>
         <div>The content of the Popper.</div>
       </Popper>
     </button>

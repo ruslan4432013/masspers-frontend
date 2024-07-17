@@ -13,6 +13,8 @@ const config: Config = {
       },
       colors: {
         dark: {
+          100: '#F3F3F3',
+          200: '#E8E8E8',
           300: '#cfcfcf',
           500: '#35393a',
         },
@@ -28,6 +30,9 @@ const config: Config = {
         '40_55': '40% 55%',
         '40_58': '40% 58%',
         '60_40': '60% 40%',
+      },
+      boxShadow: {
+        md_blur: '0 4px 87.3px 0 #00000026',
       },
     },
   },

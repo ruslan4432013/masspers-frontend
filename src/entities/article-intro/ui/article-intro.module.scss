@@ -1,4 +1,4 @@
-.article_preview {
+.article_intro {
   @apply flex flex-col gap-[22px];
 
   &__image_wrapper {
@@ -22,7 +22,7 @@
   }
 
   &__link {
-    @apply text-[14px] leading-[18px] font-normal text-primary-500 flex items-center gap-[4px]
+    @apply text-[14px] leading-[18px] font-normal text-primary-700 flex items-center gap-[4px]
     underline underline-offset-4;
   }
 }

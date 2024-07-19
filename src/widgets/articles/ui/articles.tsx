@@ -2,7 +2,7 @@ import s from './articles.module.scss'
 import banner1 from './banner1.png'
 import banner2 from './banner2.png'
 import banner3 from './banner3.png'
-import { ArticlePreview } from '@/entities/article-preview'
+import { ArticleIntro } from '@/entities/article-intro'
 
 const articles = [
   {
@@ -33,9 +33,9 @@ export const Articles = () => {
         <p className={s.articles__text}>Последние новости нашей команды</p>
       </div>
 
-      <div className={s.articles__previews_wrapper}>
+      <div className={s.articles__intros_wrapper}>
         {articles.map((item) => (
-          <ArticlePreview key={item.id} articlePreview={item} />
+          <ArticleIntro key={item.id} articleIntro={item} />
         ))}
       </div>
     </div>

@@ -22,6 +22,7 @@ const config: Config = {
         primary: {
           300: '#FF7273',
           500: '#EE4143',
+          700: '#E52D36',
         },
       },
       gridTemplateColumns: {

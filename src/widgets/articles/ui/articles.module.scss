@@ -16,7 +16,7 @@
     @apply text-[16px] leading-[21px] font-normal text-dark-500 text-center md:text-start;
   }
 
-  &__previews_wrapper {
+  &__intros_wrapper {
     @apply flex flex-col gap-[25px] md:grid md:grid-cols-3 md:gap-[20px] xl:gap-[22px];
   }
 }

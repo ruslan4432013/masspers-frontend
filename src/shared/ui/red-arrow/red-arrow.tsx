@@ -1,6 +1,11 @@
-export const RedArrow = () => {
+type Props = {
+  className?: string
+}
+
+export const RedArrow = ({ className }: Props) => {
   return (
     <svg
+      className={className}
       width="22"
       height="8"
       viewBox="0 0 22 8"

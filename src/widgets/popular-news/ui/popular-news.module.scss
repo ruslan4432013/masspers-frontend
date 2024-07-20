@@ -1,0 +1,13 @@
+.popular_news {
+  @apply flex flex-col gap-[43px] container;
+
+  &__title {
+    @apply text-[62px] leading-[80px] font-medium uppercase text-primary-500 text-center;
+
+    text-shadow: var(--text-shadow);
+  }
+
+  &__news_wrapper {
+    @apply grid grid-cols-3 gap-[22px];
+  }
+}

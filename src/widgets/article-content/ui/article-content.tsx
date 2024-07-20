@@ -1,7 +1,7 @@
 'use client'
 
 import s from './article-content.module.scss'
-import { Editor } from '@/widgets/article-content/ui/editor/editor'
+import { Editor } from '@/widgets/article-content/ui/editor'
 
 export const ArticleContent = () => {
   return (

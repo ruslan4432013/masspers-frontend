@@ -7,7 +7,7 @@ type Props = {
   articleIntro: {
     id: string
     image: StaticImageData
-    date: string
+    date: Date
     name: string
   }
 }
@@ -22,7 +22,9 @@ export const ArticleIntro = ({ articleIntro }: Props) => {
       </div>
 
       <div className={s.article_intro__info}>
-        <span className={s.article_intro__date}>{date}</span>
+        <time className={s.article_intro__date} dateTime={date.toUTCString()}>
+          {date.toLocaleDateString('ru-RU')}
+        </time>
 
         <p className={s.article_intro__name}>{name}</p>
       </div>

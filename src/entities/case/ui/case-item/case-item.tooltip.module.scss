@@ -1,0 +1,17 @@
+.case_item_tooltip {
+  @apply w-[200px] rounded-[10px] p-[17px_24px_47px_13px] bg-white flex flex-col gap-[9px];
+
+  box-shadow: 0 4px 50px 0 rgb(0 0 0 / 25%);
+
+  &__title {
+    @apply text-base;
+  }
+
+  &__content {
+    @apply text-sm;
+  }
+
+  &__link {
+    @apply text-sm text-primary-500 flex items-center gap-2;
+  }
+}

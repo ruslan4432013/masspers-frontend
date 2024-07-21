@@ -1,10 +1,9 @@
-'use client'
 import cn from 'classnames'
 import s from './case-item.module.scss'
 import { Dispatch, MouseEvent, SetStateAction, useId } from 'react'
 import { Popper } from '@mui/base'
-import { getStaticUrl } from '@/shared/lib/get-static-url'
 import { CaseDTO } from '@/shared/api/get-cases'
+import { CaseItemTooltip } from '@/entities/case/ui/case-item/case-item.tooltip'
 
 type Props = {
   isActive: boolean
@@ -16,7 +15,7 @@ type Props = {
 }
 
 export const CaseItem = (props: Props) => {
-  const { value, onClickIcon, isActive, setAnchorEl, anchorEl, image } = props
+  const { value, onClickIcon, isActive, setAnchorEl, anchorEl } = props
 
   const id = useId()
 
@@ -34,12 +33,26 @@ export const CaseItem = (props: Props) => {
       })}
     >
       <img
-        src={getStaticUrl(`https://test-mass.ru/admin/${image}`)}
+        src={'https://placehold.co/600x400'}
         className={s.case_item__preveiew}
         alt={'Preview Image'}
       />
-      <Popper disablePortal id={id} open={isOpen} anchorEl={anchorEl}>
-        <div>The content of the Popper.</div>
+      <Popper
+        className={s.case_item__tooltip_paper}
+        placement="top-end"
+        id={id}
+        open={isOpen}
+        anchorEl={anchorEl}
+        modifiers={[
+          {
+            name: 'offset',
+            options: {
+              offset: [-30, -30],
+            },
+          },
+        ]}
+      >
+        <CaseItemTooltip />
       </Popper>
     </button>
   )

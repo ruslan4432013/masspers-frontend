@@ -8,4 +8,23 @@
   &__preveiew {
     @apply w-full h-full object-scale-down object-center;
   }
+
+  &__tooltip_paper {
+    @apply rounded-[10px];
+
+    &::before {
+      --size: 30px;
+
+      position: absolute;
+      right: 0;
+      bottom: -12px;
+      width: 0;
+      height: 0;
+      border-right: var(--size) solid transparent;
+      border-bottom: var(--size) solid white;
+      border-left: var(--size) solid transparent;
+      content: '';
+      rotate: 45deg;
+    }
+  }
 }

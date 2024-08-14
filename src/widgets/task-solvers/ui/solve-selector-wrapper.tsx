@@ -11,11 +11,9 @@ type Props = {
 export const SolveSelectorWrapper = (props: Props) => {
   const { goals, currentGoals, setCurrentGoals, currentDepartment } = props
 
-  const options = goals
-
   return (
     <SelectSolveType
-      options={options}
+      options={goals}
       currentGoals={currentGoals}
       setCurrentGoals={setCurrentGoals}
       currentDepartment={currentDepartment}

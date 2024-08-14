@@ -1,5 +1,3 @@
-import { getStaticUrl } from '@/shared/lib/get-static-url'
-
 type Props = {
   text: string
   image: string
@@ -9,7 +7,7 @@ export const SolveItem = ({ text, image }: Props) => {
   return (
     <div className="flex flex-col items-center justify-center gap-[28px] md:max-w-[327px]">
       <img
-        src={getStaticUrl(image)}
+        src={image}
         alt={text.slice(0, 20)}
         width={80}
         height={100}

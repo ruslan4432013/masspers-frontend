@@ -9,6 +9,9 @@ export const Links = ({ className }: Props) => {
   return (
     <ul className={className}>
       <li>
+        <Link href={URLS.MAIN}>Главное</Link>
+      </li>
+      <li>
         <Link href={URLS.PRODUCT}>Продукт</Link>
       </li>
       <li>
@@ -19,12 +22,6 @@ export const Links = ({ className }: Props) => {
       </li>
       <li>
         <Link href={URLS.TASKS}>Задачи</Link>
-      </li>
-      <li>
-        <Link href={'#'}>Заявка</Link>
-      </li>
-      <li>
-        <Link href={'#'}>Блог</Link>
       </li>
       <li>
         <Link href={URLS.CONTACTS}>Контакты</Link>

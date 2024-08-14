@@ -1,5 +1,4 @@
 import s from './solution-item.module.scss'
-import { getStaticUrl } from '@/shared/lib/get-static-url'
 
 type Props = {
   text: string
@@ -11,7 +10,7 @@ export const SolutionItem = ({ text, image }: Props) => {
     <div className={s.solve_item}>
       <div className={s.solve_item__img_container}>
         <img
-          src={getStaticUrl(image)}
+          src={image}
           alt={text.slice(0, 20)}
           width={100}
           height={100}

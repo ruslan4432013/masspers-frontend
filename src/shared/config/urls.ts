@@ -1,4 +1,5 @@
 export const URLS = {
+  MAIN: '/',
   PRODUCT: '/product',
   CASES: '/cases',
   TEAM: '/team',

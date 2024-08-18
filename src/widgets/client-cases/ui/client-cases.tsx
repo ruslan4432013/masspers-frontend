@@ -1,12 +1,11 @@
 import s from './client-cases.module.scss'
 import { ButtonLink } from '@/shared/ui/button'
-import { getCases } from '@/shared/api/get-cases'
 import { linearizeCases } from '@/entities/case/lib/linearize-cases'
 import { CaseWrapper } from '@/widgets/client-cases/ui/case-wrapper'
 import { URLS } from '@/shared/config/urls'
 
 export const ClientCases = async () => {
-  const cases = await getCases()
+  const cases = null //await getCases()
   const linearCases = linearizeCases(cases)
 
   return (

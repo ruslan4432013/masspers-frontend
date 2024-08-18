@@ -1,25 +1,62 @@
+'use client'
+
 import { OurTeam } from '@/widgets/our-team'
 import { ApplicationForm } from '@/widgets/application-form'
 import { IssueSolutionList } from '@/widgets/issue-solution-list'
 import { TasksPreview } from '@/widgets/tasks-preview'
 import { TasksSolutions } from '@/widgets/tasks-solutions'
-import { getTasks } from '@/shared/api/get-tasks'
 import { Worth } from '@/widgets/worth'
-import { Suspense } from 'react'
+import { Suspense, useEffect, useState } from 'react'
+import { tasksData, TasksType } from '@/shared/data/tasks'
 
-const TasksPage = async () => {
-  const tasks = await getTasks()
+const TasksPage = () => {
+  const departments = Object.keys(tasksData)
+  const [currentDepartment, setCurrentDepartment] = useState(departments[0])
+  const goals = Object.keys(
+    tasksData[currentDepartment as keyof TasksType].goals
+  )
+  const [currentGoals, setCurrentGoals] = useState(goals[0])
+
+  useEffect(() => {
+    const newGoals = Object.keys(
+      tasksData[currentDepartment as keyof TasksType].goals
+    )
+    setCurrentGoals(newGoals[0])
+  }, [currentDepartment])
+
+  const currentTasks =
+    tasksData[currentDepartment as keyof TasksType].goals[currentGoals]
+      ?.tasks || []
+  const currentIssueSolutions =
+    tasksData[currentDepartment as keyof TasksType].goals[currentGoals]
+      ?.issueSolution || []
+  const worth =
+    tasksData[currentDepartment as keyof TasksType].goals[currentGoals]
+      ?.worth || []
+
   return (
     <section>
       <TasksPreview />
       <div className="mt-[60px] md:mt-[80px] xl:mt-[93px]">
-        <TasksSolutions />
+        <TasksSolutions
+          departments={departments}
+          goals={goals}
+          currentDepartment={currentDepartment}
+          setCurrentDepartment={setCurrentDepartment}
+          currentGoals={currentGoals}
+          setCurrentGoals={setCurrentGoals}
+          currentTasks={currentTasks}
+        />
       </div>
       <div className="mt-[60px] md:mt-[80px]">
-        <Suspense>{tasks && <IssueSolutionList tasksDTO={tasks} />}</Suspense>
+        <Suspense>
+          {currentIssueSolutions && (
+            <IssueSolutionList issueSolution={currentIssueSolutions} />
+          )}
+        </Suspense>
       </div>
       <div className="mt-[60px] md:mt-[80px] xl:mt-[98px]">
-        <Suspense>{tasks && <Worth tasksDTO={tasks} />}</Suspense>
+        <Suspense>{worth && <Worth worth={worth} />}</Suspense>
       </div>
       <div className="mt-[68px] md:mt-[80px] xl:mt-[145px]">
         <OurTeam />

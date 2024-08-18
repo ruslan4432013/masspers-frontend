@@ -1,19 +1,25 @@
-'use client'
 import cn from 'classnames'
 import s from './select-solve-type.module.scss'
 import { useEffect } from 'react'
 import { Select } from '@/shared/ui/select'
 import { useCustomSearchParams } from '@/shared/lib/hooks/use-custom-search-params'
 import { SOLVE_KEY } from '@/entities/tasks/tasks.constants'
+import { tasksData, TasksType } from '@/shared/data/tasks'
 
 type SelectProps = {
   onChange: (value: string) => void
   value: string
   options: string[]
   className?: string
+  currentDepartment?: string
 }
 
-const MobileSelect = ({ onChange, value, options }: SelectProps) => {
+const MobileSelect = ({
+  onChange,
+  value,
+  options,
+  currentDepartment,
+}: SelectProps) => {
   return (
     <Select
       name="solves"
@@ -25,7 +31,7 @@ const MobileSelect = ({ onChange, value, options }: SelectProps) => {
     >
       {options.map((el) => (
         <option key={el} value={el}>
-          {el}
+          {tasksData[currentDepartment as keyof TasksType].goals[el].title}
         </option>
       ))}
     </Select>
@@ -60,6 +66,7 @@ const DesktopSelect = ({
   value,
   options,
   className,
+  currentDepartment,
 }: SelectProps) => {
   return (
     <div className={cn(s.desktop_select, className)}>
@@ -67,7 +74,7 @@ const DesktopSelect = ({
         <Tab
           key={el}
           isActive={value === el}
-          text={el}
+          text={tasksData[currentDepartment as keyof TasksType].goals[el].title}
           value={el}
           onClick={onChange}
         />
@@ -79,9 +86,20 @@ const DesktopSelect = ({
 type Props = {
   options: string[]
   className?: string
+  currentDepartment: string
+  currentGoals: string
+  setCurrentGoals: (option: string) => void
 }
 
-export const SelectSolveType = ({ options, className }: Props) => {
+export const SelectSolveType = (props: Props) => {
+  const {
+    options,
+    className,
+    currentDepartment,
+    currentGoals,
+    setCurrentGoals,
+  } = props
+
   const queryParams = useCustomSearchParams()
   const queryValue = queryParams.get(SOLVE_KEY)
 
@@ -103,15 +121,17 @@ export const SelectSolveType = ({ options, className }: Props) => {
     <div>
       <div className={'md:hidden'}>
         <MobileSelect
+          currentDepartment={currentDepartment}
           options={options}
-          value={queryValue}
-          onChange={handleChange}
+          value={currentGoals}
+          onChange={setCurrentGoals}
         />
       </div>
       <DesktopSelect
+        currentDepartment={currentDepartment}
         options={options}
-        value={queryValue}
-        onChange={handleChange}
+        value={currentGoals}
+        onChange={setCurrentGoals}
         className={className}
       />
     </div>

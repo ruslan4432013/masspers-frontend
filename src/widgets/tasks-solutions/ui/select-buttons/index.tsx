@@ -1,8 +1,6 @@
-'use client'
 import { Button } from '@/shared/ui/button'
-import { useCustomSearchParams } from '@/shared/lib/hooks/use-custom-search-params'
-import { useEffect } from 'react'
 import s from './select-buttons.module.scss'
+import { tasksData, TasksType } from '@/shared/data/tasks'
 
 const variantFor = (isActive: boolean) => {
   if (isActive) {
@@ -13,36 +11,27 @@ const variantFor = (isActive: boolean) => {
 
 type Props = {
   departments: string[]
+  currentDepartment: string
+  setCurrentDepartment: (newDepartment: string) => void
 }
 
-const DEPARTMENT_KEY = 'department'
-
 export const SelectButtons = (props: Props) => {
-  const { departments } = props
-
-  const params = useCustomSearchParams()
-  const queryValue = params.get(DEPARTMENT_KEY)
+  const { departments, currentDepartment, setCurrentDepartment } = props
 
   const handleChange = (newValue: string) => () => {
-    params.set(DEPARTMENT_KEY, newValue)
+    setCurrentDepartment(newValue)
   }
-
-  useEffect(() => {
-    if (!queryValue && departments[0]) {
-      handleChange(departments[0])()
-    }
-  }, [])
 
   return (
     <div className={s.select_buttons}>
-      {departments.map((departament) => (
+      {departments.map((department) => (
         <Button
-          key={departament}
+          key={department}
           className={s.select_buttons__button}
-          variant={variantFor(queryValue === departament)}
-          onClick={handleChange(departament)}
+          variant={variantFor(currentDepartment === department)}
+          onClick={handleChange(department)}
         >
-          {departament}
+          {tasksData[department as keyof TasksType].title}
         </Button>
       ))}
     </div>

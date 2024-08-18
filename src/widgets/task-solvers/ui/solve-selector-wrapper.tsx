@@ -1,26 +1,22 @@
 'use client'
-import { GetTasksDTO } from '@/shared/api/get-tasks'
-import { useCustomSearchParams } from '@/shared/lib/hooks/use-custom-search-params'
-import { DEPARTMENT_KEY } from '@/entities/tasks'
 import { SelectSolveType } from '@/features/select-solve-type'
 
 type Props = {
-  tasksDTO: GetTasksDTO
-}
-
-const optionsFor = (department: string, tasksDTO: GetTasksDTO) => {
-  const { Who } = tasksDTO
-  return Object.keys(Who[department])
+  currentDepartment: string
+  goals: string[]
+  currentGoals: string
+  setCurrentGoals: (option: string) => void
 }
 
 export const SolveSelectorWrapper = (props: Props) => {
-  const { tasksDTO } = props
-  const params = useCustomSearchParams()
-  const departament = params.get(DEPARTMENT_KEY)
-  if (!departament) {
-    return <div />
-  }
+  const { goals, currentGoals, setCurrentGoals, currentDepartment } = props
 
-  const options = optionsFor(departament, tasksDTO)
-  return <SelectSolveType options={options} />
+  return (
+    <SelectSolveType
+      options={goals}
+      currentGoals={currentGoals}
+      setCurrentGoals={setCurrentGoals}
+      currentDepartment={currentDepartment}
+    />
+  )
 }

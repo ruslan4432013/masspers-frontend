@@ -6,5 +6,15 @@ type Props = {
 }
 
 export const StagesSelectorWrapper = ({ className }: Props) => {
-  return <SelectSolveType options={['Мегафон', 'МТС']} className={className} />
+  return (
+    <SelectSolveType
+      options={['Мегафон', 'МТС']}
+      className={className}
+      setCurrentGoals={(option: string) => {
+        console.log(option)
+      }}
+      currentDepartment={''}
+      currentGoals={''}
+    />
+  )
 }

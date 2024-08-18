@@ -10,29 +10,23 @@ import { Suspense, useEffect, useState } from 'react'
 import { tasksData, TasksType } from '@/shared/data/tasks'
 
 const TasksPage = () => {
-  const departments = Object.keys(tasksData)
-  const [currentDepartment, setCurrentDepartment] = useState(departments[0])
-  const goals = Object.keys(
-    tasksData[currentDepartment as keyof TasksType].goals
+  const departments = Object.keys(tasksData) as (keyof TasksType)[]
+  const [currentDepartment, setCurrentDepartment] = useState<keyof TasksType>(
+    departments[0]
   )
+  const goals = Object.keys(tasksData[currentDepartment].goals)
   const [currentGoals, setCurrentGoals] = useState(goals[0])
 
   useEffect(() => {
-    const newGoals = Object.keys(
-      tasksData[currentDepartment as keyof TasksType].goals
-    )
+    const newGoals = Object.keys(tasksData[currentDepartment].goals)
     setCurrentGoals(newGoals[0])
   }, [currentDepartment])
 
   const currentTasks =
-    tasksData[currentDepartment as keyof TasksType].goals[currentGoals]
-      ?.tasks || []
+    tasksData[currentDepartment].goals[currentGoals]?.tasks || []
   const currentIssueSolutions =
-    tasksData[currentDepartment as keyof TasksType].goals[currentGoals]
-      ?.issueSolution || []
-  const worth =
-    tasksData[currentDepartment as keyof TasksType].goals[currentGoals]
-      ?.worth || []
+    tasksData[currentDepartment].goals[currentGoals]?.issueSolution || []
+  const worth = tasksData[currentDepartment].goals[currentGoals]?.worth || []
 
   return (
     <section>

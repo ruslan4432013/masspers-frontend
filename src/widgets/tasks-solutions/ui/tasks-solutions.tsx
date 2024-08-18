@@ -4,13 +4,13 @@ import { Suspense } from 'react'
 import s from './tasks-solutions.module.scss'
 import { SolutionItems } from '@/widgets/tasks-solutions/ui/solution-items'
 import { SolutionSelectorWrapper } from '@/widgets/tasks-solutions/ui/solution-selector-wrapper'
-import { TaskType } from '@/shared/data/tasks'
+import { TasksType, TaskType } from '@/shared/data/tasks'
 
 type Props = {
   departments: string[]
   goals: string[]
   currentDepartment: string
-  setCurrentDepartment: (newDepartment: string) => void
+  setCurrentDepartment: (newDepartment: keyof TasksType) => void
   currentGoals: string
   setCurrentGoals: (option: string) => void
   currentTasks: TaskType[]

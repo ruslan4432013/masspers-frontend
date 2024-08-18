@@ -12,14 +12,14 @@ const variantFor = (isActive: boolean) => {
 type Props = {
   departments: string[]
   currentDepartment: string
-  setCurrentDepartment: (newDepartment: string) => void
+  setCurrentDepartment: (newDepartment: keyof TasksType) => void
 }
 
 export const SelectButtons = (props: Props) => {
   const { departments, currentDepartment, setCurrentDepartment } = props
 
   const handleChange = (newValue: string) => () => {
-    setCurrentDepartment(newValue)
+    setCurrentDepartment(newValue as keyof TasksType)
   }
 
   return (

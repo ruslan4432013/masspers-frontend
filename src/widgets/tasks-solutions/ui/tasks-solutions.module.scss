@@ -33,7 +33,7 @@
   &__solution_items_container {
     @apply border border-primary-500 px-[10px] pt-[65px] pb-[48px] flex flex-col items-center
     justify-center gap-[48px] rounded-[10px] mt-[31px] md:mt-0 md:gap-[31px] md:w-full md:px-[30px]
-    md:py-[54px] md:rounded-tl-[0] xl:py-[68px] xl:pl-[33px] xl:pr-[90px];
+    md:py-[54px] xl:py-[68px] xl:pl-[33px] xl:pr-[90px];
   }
 
   &__solution_items__button {

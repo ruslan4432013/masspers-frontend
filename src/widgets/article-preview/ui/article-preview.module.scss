@@ -1,0 +1,31 @@
+.article_preview {
+  background-image: url('background.png');
+
+  @apply bg-cover bg-no-repeat;
+
+  &__wrapper {
+    @apply flex flex-col items-center gap-[29px] py-[61px] px-[13px] md:pt-[95px] md:pb-[149px]
+    md:px-[23px] md:items-start xl:pt-[183px] xl:pb-[163px] xl:px-[178px];
+  }
+
+  &__link {
+    @apply text-[14px] leading-[18px] font-normal text-primary-700 flex items-center gap-[13px]
+    underline underline-offset-4;
+  }
+
+  &__arrow {
+    @apply transform rotate-180;
+  }
+
+  &__title {
+    @apply text-[22px] leading-[36px] font-medium uppercase text-primary-500 text-center
+    break-words md:text-[32px] md:leading-[41px] md:break-normal md:text-start xl:text-[44px] xl:leading-[57px];
+
+    text-shadow: var(--text-shadow);
+  }
+
+  &__date {
+    @apply inline-block text-[12px] leading-[15px] font-normal text-[#6D6D6D] text-center
+    md:text-start;
+  }
+}

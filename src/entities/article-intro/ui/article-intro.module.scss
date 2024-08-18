@@ -1,0 +1,28 @@
+.article_intro {
+  @apply flex flex-col gap-[22px];
+
+  &__image_wrapper {
+    @apply flex justify-center items-center;
+  }
+
+  &__image {
+    @apply rounded-[10px] w-full h-auto;
+  }
+
+  &__info {
+    @apply flex flex-col gap-[11px];
+  }
+
+  &__date {
+    @apply inline-block text-[12px] leading-[15px] font-normal text-dark-400;
+  }
+
+  &__name {
+    @apply text-[18px] leading-[23px] font-medium text-primary-500 xl:text-[22px] xl:leading-[28px];
+  }
+
+  &__link {
+    @apply text-[14px] leading-[18px] font-normal text-primary-700 flex items-center gap-[4px]
+    underline underline-offset-4;
+  }
+}

@@ -1,5 +1,4 @@
 import s from './news-paper.module.scss'
-import { NewsSwiper } from '@/shared/ui/news-swiper'
 import newsImg from './news-example.png'
 import { NewsSlide } from '@/entities/news'
 
@@ -9,7 +8,7 @@ const NewsPaper = () => {
     <div className="xl:container">
       <h5 className={s.news_paper__title}>Последние новости нашей команды</h5>
       <div className="mt-[22px] md:max-w-[900px] md:mx-auto xl:max-w-[initial]">
-        <NewsSwiper>
+        <div className="flex flex-col md:flex-row">
           <NewsSlide
             date={date}
             title={`Персонализированный видеомаркетинг: следующая революция в контент-маркетинге`}
@@ -28,13 +27,7 @@ const NewsPaper = () => {
             subtitle={`«Персонализированный Видеоконтент Может Стать Маркетинговым Прорывом, В Котором Нуждаются Бренды”...`}
             previewImg={newsImg.src}
           />
-          <NewsSlide
-            date={date}
-            title={`Персонализированный видеомаркетинг: следующая революция в контент-маркетинге`}
-            subtitle={`«Персонализированный Видеоконтент Может Стать Маркетинговым Прорывом, В Котором Нуждаются Бренды”...`}
-            previewImg={newsImg.src}
-          />
-        </NewsSwiper>
+        </div>
       </div>
     </div>
   )
